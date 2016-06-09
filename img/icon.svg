@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="146px" height="96px" viewBox="0 0 146 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>Symbol</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Logo" transform="translate(0.000000, -18.000000)">
+            <g id="Symbol" transform="translate(0.000000, 18.000000)">
+                <polygon id="/" fill="#23374B" points="79.5084109 0 54.9756614 92.3544304 66.0153986 96 90.5481481 3.64556962"></polygon>
+                <polygon id="&gt;" fill="#141620" transform="translate(122.222186, 47.633898) rotate(180.000000) translate(-122.222186, -47.633898) " points="145.52381 18.5084746 136.939001 8.8 98.9205632 47.6338983 136.939001 86.4677966 145.52381 76.759322 116.09018 47.6338983"></polygon>
+                <polygon id="&lt;" fill="#328CA5" points="46.6032463 18.6440678 38.0184378 8.93559322 5.70136162e-14 47.7694915 38.0184378 86.6033898 46.6032463 76.8949153 17.1696171 47.7694915"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

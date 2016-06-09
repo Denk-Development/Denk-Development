@@ -1,0 +1,360 @@
+<!doctype HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Timo Denk" />
+	<meta name="description" content="Any kind of hardware and software project." />
+	<meta name="keywords" content="Timo, Denk, Development, Hardware, Software" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Denk Development</title>
+	<link rel="shortcut icon" type="image/png" href="img/icon@2x.png"/>
+	
+	<style type="text/css">
+		html, body {
+			margin: 0;
+			padding: 0;
+
+			font-family: Helvetica;
+
+			background: #555;
+		}
+
+		.header-bg-image {
+			position: absolute;
+			top: 0; 
+			left: 0;
+			height: 100%;
+			width: 100%;
+
+			background-image: initial;
+			background-size: cover;
+			background-position: center 0;
+
+			transition: background-image ease-in 1s;
+
+		    -webkit-filter: blur(2px);
+		    -moz-filter: blur(2px);
+		    -o-filter: blur(2px);
+		    -ms-filter: blur(2px);
+		    filter: blur(2px);
+		}
+
+		header {
+			position: relative;
+			min-height: 100vh;
+			width: 100%;
+			text-align: center;
+		}
+
+		header .header-content {
+			position: relative;
+			background-color: rgba(255, 255, 255, 0.8);
+			min-height: 100vh;
+		}
+
+		header .header-content > div {
+			padding: 100px 25px;
+		}
+
+		header .logo-main {
+			width: 410px;
+			max-width: 100%;
+			margin-top: 100px;
+		}
+
+		header .title {
+			font-size: 40px;
+		    font-weight: 300;
+		    line-height: 60px;
+		    margin-bottom: 100px;
+		    color: #333;
+		    text-shadow: -48px -22.4px 178.8px rgba(0,0,0,0.26);
+		    position: relative;
+		}
+
+		header .how-about {
+			font-size: 35px;
+		    font-weight: 300;
+		    color: #333;
+		    text-shadow: -48px -22.4px 178.8px rgba(0,0,0,0.26);
+		    position: relative;
+		}
+
+		.typed-cursor {
+			opacity: 1;
+			animation: blink 0.7s infinite;
+			font-size: 90%;
+    		vertical-align: top;
+		}
+
+		@keyframes blink {
+			0% {
+				opacity: 1;
+			}
+			50% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+
+
+		.main {
+			position: relative;
+		}
+
+		.main section {
+			margin: 0;
+			padding: 45px 25px;
+			text-align: center;
+		}
+
+		.main section > div {
+			max-width: 600px;
+			margin: 0 auto;
+		}
+
+		.main section:nth-child(odd) {
+			background-color: rgb(245, 245, 245);
+		}
+
+		.main section:nth-child(even) {
+			background-color: rgb(255, 255, 255);
+		}
+
+		.main section p {
+			color: #333;
+		    font-size: 12pt;
+		    line-height: 16pt;
+		}
+
+		.faq .question {
+			font-weight: bold;
+			color: #333;
+		}
+
+		.faq .question::after {
+			content: ' ';
+		}
+
+		.faq .answer {
+			font-style: italic;
+		}
+
+        footer {
+        	text-align: center;
+        	padding: 25px;
+
+            color: white;
+            background: url('img/footer_bg2.png') repeat #555;
+            box-shadow: inset 0 -50px 80px rgb(37, 47, 54);
+            border-top: 1px solid rgb(37, 47, 54);
+        }
+
+        footer .copyright img {
+        	height: 20px;
+        	vertical-align: middle;
+        }
+
+        @-webkit-keyframes fadeIn {
+		    from {
+		        opacity: 0;
+		    }
+		    to {
+		        opacity: 1;
+		    }
+		}
+		@keyframes fadeIn {
+		    from {
+		        opacity: 0;
+		    }
+		    to {
+		        opacity: 1;
+		    }
+		}
+
+		@-webkit-keyframes fadeOut {
+		    from {
+		        opacity: 1;
+		    }
+		    to {
+		        opacity: 0;
+		    }
+		}
+		@keyframes fadeOut {
+		    from {
+		        opacity: 1;
+		    }
+		    to {
+		        opacity: 0;
+		    }
+		}
+
+		.fadeIn {
+		    -webkit-animation: fadeIn;
+		    animation: fadeIn;
+		    opacity: 1 !important;
+		}
+
+		.fadeOut {
+		    -webkit-animation: fadeOut;
+		    animation: fadeOut;
+		    opacity: 0 !important;
+		}
+
+		.fast {
+		    -webkit-animation-duration: 1s;
+		    animation-duration: 1s
+		}
+
+		.slow {
+		    -webkit-animation-duration: 5s;
+		    animation-duration: 5s
+		}
+
+		#header-fade {
+			opacity: 0;
+		}
+
+		.hidden {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="header-bg-image"></div>
+		<div class="header-content">
+			<div id="header-fade">
+				<img class="logo-main" src="img/logo.svg" alt="&lt;/&gt; Denk Development"/>
+				<p class="title">Any kind of <strong>hardware</strong> and <strong>software</strong> project.</p>
+
+				<p class="how-about">How about <span id="how-about-content"></span><span class="typed-cursor">|</span>
+			</div>
+		</div>
+	</header>
+	<div class="main">
+		<section>
+			<div>
+				<h1>What is Denk Development?</h1>
+				<p>Denk Development is a German business, operated by me, <a href="http://www.timodenk.com">Timo Denk</a>. It was founded because I got lots of of requests from people on the internet who saw my projects, especially on <a href="https://www.youtube.com/watch?v=BzjHiSyrwbY&list=PL4VilVYUVB3N2nihQchovAwaw0vHqhjQe" target="_blank">YouTube</a>, and wanted me to develop stuff for them. In order to do this I founded Denk Development in June 2016.</p>
+			</div>
+		</section>
+		<section>
+			<div>
+				<h1>Some Example Projects</h1>
+				<p>To get an idea of what I am doing, here are some examples of my commercial projects.</p>
+				<p>Coming soon...</p>
+			</div>
+		</section>
+		<section>
+			<div>
+				<h1>Get in Touch</h1>
+				<p>Got a development task for me?</p>
+				<h4>Contact me via <a href="mailto:development@timodenk.com">development@timodenk.com</a>.</h4>
+			</div>
+		</section>
+		<section class="faq">
+			<div>
+				<h1>Frequently Asked Questions</h1>
+				<p>
+					<span class="question">What is the price range?</span>
+					<span class="answer">Anything from €25 to €1.000 is well within range.</span>
+				</p>
+				<p>
+					<span class="question">How long does it take?</span>
+					<span class="answer">Depends on the project: 1 to 5 hour projecs are usually rushed on the upcoming Saturday.</span>
+				</p>
+				<p>
+					<span class="question">How does software exchange work?</span>
+					<span class="answer">Because many projects involve multiple testing cycles,
+					 code is generally exchanged via <a href="https://github.com/Simsso" target="_blank">GitHub</a>.</span>
+				</p>
+				<p>
+					<span class="question">How does hardware exchange work?</span>
+					<span class="answer">Simply sending packets.</span>
+				</p>
+			</div>
+		</section>
+	</div>
+	<footer>
+	    <div class="copyright">
+	        <img src="img/logo-white.svg" alt="&lt;/&gt; Denk Development" />
+	    </div>
+	</footer>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		(function() {
+			var words = ["Arduino stuff", "the Teensy microcontroller", "a Window desktop app", "a simple website", "blinking LEDs", "an Android app", "Smart Home projects", "a nice website section", "moving servos", "Arduino data transmission", "JavaScript", "PHP", "HTML", "Node.js", "jQuery", "a commandline tool"];
+			var selectedWord = "";
+			var interval;
+
+			// cache DOM
+			var $out = $('#how-about-content')
+
+			function showRandomWord() {
+				selectedWord = words[parseInt(Math.random() * words.length)] + "?";
+				interval = setInterval(showNextChar, 70);
+			}
+
+			function showNextChar() {
+				var shown = $out.html();
+				if (shown.length === selectedWord.length) {
+					clearInterval(interval);
+					setTimeout(removeWord, 1500);
+				}
+				else {
+					$out.html(selectedWord.substring(0, shown.length + 1));
+				}
+			}
+
+			function removeWord() {
+				interval = setInterval(removeLastChar, 20);
+			}
+
+			function removeLastChar() {
+				var shown = $out.html();
+				if (shown.length > 0) {
+					$out.html(shown.substring(0, shown.length - 1));
+				}
+				else {
+					clearInterval(interval);
+					setTimeout(showRandomWord, 500);
+				}
+			}
+
+			setTimeout(showRandomWord, 4000);
+		})();
+
+		(function() {
+			var images = ['IMG_20160424_162850472.jpg', 'IMG_20160609_142711827_HDR.jpg', 'IMG_20160423_204314099_HDR.jpg', 'screenshot_github_shiftregister.jpg', '222823997_1000.jpg', '713218851_27466.jpg', 'IMG_20160211_155425633.jpg', 'IMG_20160609_142736302.jpg', 'IMG_20160609_142949492.jpg'];
+			var indexShown = -1;
+
+			// preload images
+			for (var i = 0; i < images.length; i++) {
+				$('body').append('<img src="img/background/' + images[i] + '" alt="" class="hidden" />');
+			}
+
+			// cache DOM
+			var $bg = $('.header-bg-image');
+
+			setInterval(nextBackgroundImage, 6000);
+			function nextBackgroundImage() {
+				if (++indexShown >= images.length) {
+					indexShown = 0;
+				}
+
+				$bg.css('background-image', 'url(\'img/background/' + images[indexShown] + '\')');
+			}
+			nextBackgroundImage();
+		})();
+
+		setTimeout(function() {
+			$('#header-fade').addClass('fadeIn fast')
+		}, 1000);
+	</script>
+</body>
+</html>
