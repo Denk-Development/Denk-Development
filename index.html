@@ -17,7 +17,7 @@
 
 			font-family: Helvetica;
 
-			background: #555;
+			background: #FFF;
 		}
 
 		.header-bg-image {
@@ -27,10 +27,11 @@
 			height: 100%;
 			width: 100%;
 
-			background-image: initial;
+			background-image: url('img/background/IMG_20160424_162850472.jpg');
 			background-size: cover;
 			background-position: center 0;
 
+			-webkit-transition: background-image ease-in 1s;
 			transition: background-image ease-in 1s;
 
 		    -webkit-filter: blur(2px);
@@ -233,6 +234,11 @@
 
 				<p class="how-about">How about <span id="how-about-content"></span><span class="typed-cursor">|</span>
 			</div>
+			<script type="text/javascript" async>
+				setTimeout(function() {
+					document.getElementById('header-fade').className += 'fadeIn fast';
+				}, 500);
+			</script>
 		</div>
 	</header>
 	<div class="main">
@@ -332,11 +338,7 @@
 		(function() {
 			var images = ['IMG_20160424_162850472.jpg', 'IMG_20160609_142711827_HDR.jpg', 'IMG_20160423_204314099_HDR.jpg', 'screenshot_github_shiftregister.jpg', '222823997_1000.jpg', '713218851_27466.jpg', 'IMG_20160211_155425633.jpg', 'IMG_20160609_142736302.jpg', 'IMG_20160609_142949492.jpg'];
 			var indexShown = -1;
-
-			// preload images
-			for (var i = 0; i < images.length; i++) {
-				$('body').append('<img src="img/background/' + images[i] + '" alt="" class="hidden" />');
-			}
+			var fullIteration = false;
 
 			// cache DOM
 			var $bg = $('.header-bg-image');
@@ -345,16 +347,23 @@
 			function nextBackgroundImage() {
 				if (++indexShown >= images.length) {
 					indexShown = 0;
+					fullIteration = true;
 				}
 
 				$bg.css('background-image', 'url(\'img/background/' + images[indexShown] + '\')');
+
+				if (!fullIteration && indexShown !== images.length - 1) {
+					// download next image
+					setTimeout(function(indexShown) {
+						$('body').append('<img src="img/background/' + images[indexShown + 1] + '" alt="" class="hidden" />');
+					}, 1000, indexShown);
+				}
 			}
-			nextBackgroundImage();
 		})();
 
 		setTimeout(function() {
 			$('#header-fade').addClass('fadeIn fast')
-		}, 1000);
+		}, 0);
 	</script>
 </body>
 </html>
