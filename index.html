@@ -81,6 +81,10 @@
 		    text-shadow: -48px -22.4px 178.8px rgba(0,0,0,0.26);
 		    position: relative;
 		}
+		
+		header .how-about .how-about-prefix {
+			color: #555;
+		}
 
 		.typed-cursor {
 			opacity: 1;
@@ -196,13 +200,13 @@
 		.fadeIn {
 		    -webkit-animation: fadeIn;
 		    animation: fadeIn;
-		    opacity: 1 !important;
+		    opacity: 1;
 		}
 
 		.fadeOut {
 		    -webkit-animation: fadeOut;
 		    animation: fadeOut;
-		    opacity: 0 !important;
+		    opacity: 0;
 		}
 
 		.fast {
@@ -215,10 +219,6 @@
 		    animation-duration: 5s
 		}
 
-		#header-fade {
-			opacity: 0;
-		}
-
 		.hidden {
 			display: none;
 		}
@@ -228,15 +228,16 @@
 	<header>
 		<div class="header-bg-image"></div>
 		<div class="header-content">
-			<div id="header-fade">
+			<div id="header-fade" style="opacity: 0; ">
 				<img class="logo-main" src="img/logo.svg" alt="&lt;/&gt; Denk Development"/>
 				<p class="title">Any kind of <strong>hardware</strong> and <strong>software</strong> project.</p>
 
-				<p class="how-about">How about <span id="how-about-content"></span><span class="typed-cursor">|</span>
+				<p class="how-about"><span class="how-about-prefix">How about</span> <span id="how-about-content"></span><span id="how-about-cursor" class="typed-cursor">|</span>
 			</div>
 			<script type="text/javascript" async>
 				setTimeout(function() {
 					document.getElementById('header-fade').className += 'fadeIn fast';
+					document.getElementById('header-fade').style.opacity = '';
 				}, 500);
 			</script>
 		</div>
@@ -245,7 +246,7 @@
 		<section>
 			<div>
 				<h1>What is Denk Development?</h1>
-				<p>Denk Development is a German business, operated by me, <a href="http://www.timodenk.com">Timo Denk</a>. It was founded because I got lots of of requests from people on the internet who saw my projects, especially on <a href="https://www.youtube.com/watch?v=BzjHiSyrwbY&list=PL4VilVYUVB3N2nihQchovAwaw0vHqhjQe" target="_blank">YouTube</a>, and wanted me to develop stuff for them. In order to do this I founded Denk Development in June 2016.</p>
+				<p>Denk Development is a German business, operated by me, <a href="http://www.timodenk.com">Timo Denk</a>. It was founded because I got lots of requests from people on the internet who saw my projects, especially on <a href="https://www.youtube.com/watch?v=BzjHiSyrwbY&list=PL4VilVYUVB3N2nihQchovAwaw0vHqhjQe" target="_blank">YouTube</a>, and wanted me to develop stuff for them. In order to do this I founded Denk Development in June 2016.</p>
 			</div>
 		</section>
 		<section>
@@ -293,16 +294,52 @@
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 	<script type="text/javascript">
+		// randomizes array element order in-place
+		Array.prototype.shuffle = function() {
+		  var swapIndex;
+		  for (var i = 0; i < this.length; i++) {
+		    swapIndex = Math.floor(Math.random() * this.length);
+		    this.swap(i, swapIndex);
+		  }
+		  return this;
+		};
+
+
+		// swaps two elements
+		Array.prototype.swap = function(a, b) {
+		  var tmp = this[a];
+		  this[a] = this[b];
+		  this[b] = tmp;
+		  return this;
+		};
+
 		(function() {
-			var words = ["Arduino stuff", "the Teensy microcontroller", "a Window desktop app", "a simple website", "blinking LEDs", "an Android app", "Smart Home projects", "a nice website section", "moving servos", "Arduino data transmission", "JavaScript", "PHP", "HTML", "Node.js", "jQuery", "a commandline tool"];
+			var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+			var words = ["Arduino stuff", "the Teensy microcontroller", "a Window desktop app", "a simple website", "blinking LEDs", "an Android app", "Smart Home projects", "a nice website section", "moving servos", "Arduino data transmission", "JavaScript", "PHP", "HTML", "Node.js", "jQuery", "a commandline tool", "Assembly", "SD Card data logging", "remote plug socket control", "Raspberry Pi projects", "2\" TFT displays", "Bootstrap sites", "Angular JS web apps", "anything related to Wordpress", "a security camera"];
+			words.shuffle();
+
+			var index = 0;
 			var selectedWord = "";
 			var interval;
 
 			// cache DOM
-			var $out = $('#how-about-content')
+			var $out = $('#how-about-content'), $cursor = $('#how-about-cursor');
+
+			if (isSafari) {
+				setTimeout(function() {
+					$cursor.addClass('hidden');
+					$out.html(words[0] + "?");
+				}, 3000);
+				return; // the following is not supported by Safari
+			}
 
 			function showRandomWord() {
-				selectedWord = words[parseInt(Math.random() * words.length)] + "?";
+				if (index != words.length) {
+					index = 0;
+					words.shuffle();
+				}
+				selectedWord = words[index++] + "?";
 				interval = setInterval(showNextChar, 70);
 			}
 
@@ -332,7 +369,7 @@
 				}
 			}
 
-			setTimeout(showRandomWord, 4000);
+			setTimeout(showRandomWord, 3000);
 		})();
 
 		(function() {
@@ -360,10 +397,6 @@
 				}
 			}
 		})();
-
-		setTimeout(function() {
-			$('#header-fade').addClass('fadeIn fast')
-		}, 0);
 	</script>
 </body>
 </html>
