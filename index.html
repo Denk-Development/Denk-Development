@@ -78,44 +78,10 @@
 			font-size: 40px;
 		    font-weight: 300;
 		    line-height: 60px;
-		    margin-bottom: 100px;
 		    margin-top: 100px;
 		    color: #333;
 		    text-shadow: -48px -22.4px 178.8px rgba(0,0,0,0.26);
 		    position: relative;
-		}
-
-		header .how-about {
-			height: 35px; /* prevent height from changing when the text changes */
-			font-family: monospace;
-			font-size: 35px;
-		    font-weight: 300;
-		    color: #333;
-		    text-shadow: -48px -22.4px 178.8px rgba(0,0,0,0.26);
-		    position: relative;
-		}
-		
-		header .how-about .how-about-prefix {
-			color: #555;
-		}
-
-		.typed-cursor {
-			opacity: 1;
-			animation: blink 0.7s infinite;
-			font-size: 90%;
-    		vertical-align: top;
-		}
-
-		@keyframes blink {
-			0% {
-				opacity: 1;
-			}
-			50% {
-				opacity: 0;
-			}
-			100% {
-				opacity: 1;
-			}
 		}
 
 
@@ -157,10 +123,22 @@
 			text-align: center;
 		}
 
+		.top-icon {
+			height: 80px;
+			margin-top: 0;
+			margin-bottom: 40px;
+		}
+
+		.competence-icon {
+			width: 150px;
+			max-width: 100%
+		}
+
 		.main section h1 {
 			color: #505458;
 			font-size: 30px;
 			margin-bottom: 25px;
+			margin-top: 0;
 		}
 
 		.main section > *:first-child {
@@ -190,6 +168,38 @@
     		font-size: 15px;
 		}
 
+		.how-about {
+			height: 35px; /* prevent height from changing when the text changes */
+			font-family: monospace;
+		    font-weight: 300;
+		    color: #333;
+		    text-shadow: -48px -22.4px 178.8px rgba(0,0,0,0.26);
+		    position: relative;
+		}
+		
+		.how-about .how-about-prefix {
+			color: #555;
+		}
+
+		.typed-cursor {
+			opacity: 1;
+			animation: blink 0.7s infinite;
+			font-size: 90%;
+    		vertical-align: top;
+		}
+
+		@keyframes blink {
+			0% {
+				opacity: 1;
+			}
+			50% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+
 		.customers .customer-dialog {
 			text-align: left;
 		}
@@ -207,23 +217,33 @@
 		}
 
 		.customers .customer-images {
-			margin-top: 80px;
+			margin-top: 40px;
 		}
 
 		.customers .customer-images div {
-			padding: 10px;
-			height: 80px;
+			padding: 20px;
+			height: 140px;
 		}
-	
+
+		.customers .customer-images a {
+			max-height: 80px;
+			max-width: 100%;
+		}
+
 		.customers .customer-images img {
-		    max-width: 100%;
-		    max-height: 100%;
+			max-height: 80px;
+			max-width: 100%;
+
 		    -webkit-filter: grayscale(100%);
 		    filter: grayscale(100%);
 		    opacity: .6;
 
 		    transition: ease-in .2s;
 		    transition-property: -webkit-filter, filter, opacity;
+		}
+
+		.customers .customer-images a.full, .customers .customer-images a.full img {
+			width: 100%;
 		}
 
 		.customers .customer-images img:hover {
@@ -273,14 +293,20 @@
         	height: 20px;
         	vertical-align: middle;
         }
-
         footer .legal {
-        	float: right;
+		    float: right;
+		}
+
+        footer .timodenk {
+        	float: left;
+        }
+
+        footer a {
         	color: #AAA;
         	transition: color ease-in .2s;
         }
 
-        footer .legal:hover {
+        footer a:hover {
         	color: #FFF;
         	text-decoration: none;
         }
@@ -349,18 +375,25 @@
 		.top20 {
 			margin-top: 20px;
 		}
+
+		.top40 {
+			margin-top: 40px;
+		}
+
+		.vcenter {
+		    display: flex;
+		    align-items: center;
+		}
 	</style>
 </head>
 <body>
 	<header>
-		<div class="header-bg-image"></div>
+		<div class="header-bg-image hidden-xs"></div>
 		<div class="header-content">
 			<div class="min-height"></div>
 			<div id="header-fade" style="opacity: 0; "><!-- class added via JavaScript -->
 				<img class="logo-main" src="img/logo.svg" alt="&lt;/&gt; Denk Development"/>
 				<p class="title">Any kind of <strong>hardware</strong> and <strong>software</strong> project.</p>
-
-				<p class="how-about"><span class="how-about-prefix">How about</span> <span id="how-about-content"></span></p>
 			</div>
 			<script type="text/javascript" async>
 				setTimeout(function() {
@@ -373,8 +406,20 @@
 	<div class="main">
 		<section>
 			<div>
+				<img src="img/icon.svg" class="top-icon">
 				<h1>What is Denk Development?</h1>
-				<p>Denk Development is a German <strong>hardware and software development company</strong>, operated by me, <a href="http://www.timodenk.com">Timo Denk</a>. It was founded because I got lots of requests from people on the internet who saw my projects, especially on <a href="https://www.youtube.com/watch?v=BzjHiSyrwbY&list=PL4VilVYUVB3N2nihQchovAwaw0vHqhjQe" target="_blank">YouTube</a>, and wanted me to develop stuff for them. In order to do this I founded Denk Development in June 2016.</p>
+				<p>Denk Development is a German <strong>hardware and software development company</strong>, operated by me, <a href="http://www.timodenk.com">Timo Denk</a>. It was founded because I got lots of requests from people on the internet who saw my projects, especially on <a href="https://www.youtube.com/watch?v=BzjHiSyrwbY&list=PL4VilVYUVB3N2nihQchovAwaw0vHqhjQe" target="_blank">YouTube</a>, and wanted me to develop stuff for them. In order to do this I founded Denk Development in June&nbsp;2016.</p>
+
+				<p class="how-about top40"><span class="how-about-prefix">How about</span> <span id="how-about-content"></span></p>
+
+				<div class="row top40">
+					<div class="col-xs-6">
+						<img class="pull-right competence-icon" src="img/code.svg">
+					</div>
+					<div class="col-xs-6">
+						<img class="pull-left competence-icon" src="img/microcontroller.svg">
+					</div>
+				</div>
 			</div>
 		</section>
 
@@ -383,7 +428,7 @@
 		<section class="customers">
 			<div>
 				<h1>Some Example Projects</h1>
-				<p>Here are some examples of what Denk Development does:</p>
+				<p>Here are some examples of what Denk Development does.</p>
 				<div class="row">
 					<div class="col-md-6 customer-dialog top20">
 						<p>I need to attach a TFT screen to an Arduino and show game data on it.</p>
@@ -400,24 +445,24 @@
 					</div>
 				</div>
 				<div class="row customer-images">
-					<div class="col-xs-6 col-sm-3">
-						<a href="http://kreativekiste.de/" target="_blank">
-							<img src="img/customer/kreativekiste.png">
-						</a>
-					</div>
-					<div class="col-xs-6 col-sm-3">
-						<a href="http://hatchery.io/" target="_blank">
+					<div class="col-xs-6 col-sm-3 vcenter">
+						<a href="http://hatchery.io/" target="_blank" class="full">
 							<img src="img/customer/hatchery.svg">
 						</a>
 					</div>
-					<div class="col-xs-6 col-sm-3">
+					<div class="col-xs-6 col-sm-3 vcenter">
 						<a href="http://www.hombach-forsttechnik.de/" target="_blank">
 							<img src="img/customer/hombach-forsttechnik.jpg">
 						</a>
 					</div>
-					<div class="col-xs-6 col-sm-3">
-						<a href="http://www.lsd-lasershowdesign.de/" target="_blank">
-							<img src="img/customer/laser-show-design.bmp">
+					<div class="col-xs-6 col-sm-3 vcenter">
+						<a href="http://kreativekiste.de/" target="_blank">
+							<img src="img/customer/kreativekiste.png">
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-3 vcenter">
+						<a href="http://www.lsd-lasershowdesign.de/" target="_blank" class="full">
+							<img src="img/customer/lsd.svg">
 						</a>
 					</div>
 				</div>
@@ -429,8 +474,8 @@
 		<section>
 			<div>
 				<h1>Get in Touch</h1>
-				<p>Got a development task for me?</p>
-				<h4>Contact me via <a href="mailto:development@timodenk.com">development@timodenk.com</a>.</h4>
+				<p>Got a development task?</p>
+				<h4>Contact me via <a href="mailto:development@timodenk.com">development@timodenk.com</a></h4>
 			</div>
 		</section>
 
@@ -461,6 +506,7 @@
 	</div>
 	<footer>
 	    <div class="copyright">
+	        <a class="timodenk" href="http://timodenk.com" target="_blank">Timo Denk</a>
 	        <img src="img/logo-white.svg" alt="&lt;/&gt; Denk Development" />
 	        <a class="legal" href="http://www.simsso.de/?type=impressum" target="_blank">Legal</a>
 	    </div>
@@ -504,7 +550,7 @@
 	            // backspacing speed
 	            backSpeed: 0,
 	            // time before backspacing
-	            backDelay: 1000,
+	            backDelay: 1500,
 	            // loop
 	            loop: true,
 	            // false = infinite
@@ -512,7 +558,7 @@
 	            // show cursor
 	            showCursor: true,
 	            // character for cursor
-	            cursorChar: "|",
+	            cursorChar: "_",
 	            // either html or text
 	            contentType: 'text'
 			});
