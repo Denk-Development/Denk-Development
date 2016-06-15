@@ -393,6 +393,14 @@
 		    display: flex;
 		    align-items: center;
 		}
+
+		textarea {
+			resize: vertical;
+		}
+
+		.full-width {
+			width: 100%;
+		}
 	</style>
 </head>
 <body>
@@ -493,7 +501,44 @@
 			<div>
 				<h1>Get in Touch</h1>
 				<p>Got a development task or just a question?</p>
-				<h4>Contact us via <a href="mailto:development@timodenk.com">development@timodenk.com</a></h4>
+				<h3><a href="mailto:development@timodenk.com" target="_blank">development@timodenk.com</a></h3>
+				<hr>
+				<form id="contact-form">
+					<div class="row">
+						<div class="col-sm-5 col-sm-offset-1">
+							<div class="form-group">
+								<div class="input-group">
+									<div class="input-group-addon">Name</div>
+									<input type="text" class="form-control" id="contact-name" placeholder="John Q. Public" required="required">
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-5">
+							<div class="form-group">
+								<div class="input-group">
+									<div class="input-group-addon">Email-Address</div>
+									<input type="email" class="form-control" id="contact-email" placeholder="email@domain.com" required="required">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-10 col-sm-offset-1">
+							<div class="form-group">
+								<textarea class="form-control" id="contact-message" placeholder="Your message" rows="8" required="required"></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4 col-sm-offset-4">
+							<p id="contact-success-msg" class="success hidden">Thanks for your approach, your message has been sent.</p>
+							<p id="contact-error-msg" class="danger hidden">An unknown error occured. Please <a href="mailto:development@timodenk.com" target="_blank">go the traditional way and send an email</a>.</p>
+							<div class="form-group">
+								<input type="submit" id="contact-submit" class="btn btn-primary full-width" value="Send" disabled="disabled">
+							</div>
+						</div>
+					</div>
+				</form>
 			</div>
 		</section>
 
@@ -555,6 +600,67 @@
 		  this[b] = tmp;
 		  return this;
 		};
+
+		// contact form
+		(function() {
+			$('#contact-form').on('submit', submitForm)
+			$('#contact-submit').removeAttr('disabled');
+
+			function submitForm(e) {
+				e.preventDefault();
+
+				// hide error and success messages
+				$('#contact-error-msg').addClass('hidden');
+				$('#contact-success-msg').addClass('hidden');
+
+				// disable button
+				$('#contact-submit').attr('disabled', 'disabled');
+
+				var data = {
+					'Name': $('#contact-name').val(),
+					'Email-Address': $('#contact-email').val(),
+					'Message': $('#contact-message').val()
+				};
+
+				sendData(data);
+			}
+
+			function sendData(data) {
+		        // send data to the server
+		        jQuery.ajax({
+		            type: "POST",
+		            url: 'backend/submit.php',
+		            data: { 'input': JSON.stringify(data) },
+		            success: function (res) {
+		                console.log(res);
+		                if (res == 1) {
+		                	success();
+		                }
+		                else {
+		                    showError();
+		                }
+		            },
+		            error: showError
+		        });
+			}
+
+		    function showError(res) {
+		    	console.log(res);
+		        $('#contact-submit').removeAttr('disabled');
+		        $('#contact-error-msg').removeClass('hidden');
+		    }
+
+		    function success() {
+		    	// clear form
+		    	$('#contact-name').val('');
+				$('#contact-email').val('');
+				$('#contact-message').val('');
+
+		        $('#contact-submit').removeAttr('disabled'); // re enable button
+		        $('#contact-success-msg').removeClass('hidden');
+		    }
+		})();
+
 
 		(function() {
 			var words = ["Arduino stuff", "the Teensy microcontroller", "a Windows desktop app", "a simple website", "blinking LEDs", "an Android app", "Smart Home projects", "a nice website section", "moving servos", "Arduino data transmission", "JavaScript", "PHP", "HTML", "Node.js", "jQuery", "a commandline tool", "Assembly", "SD Card data logging", "remote plug socket control", "Raspberry Pi projects", "2\" TFT displays", "Bootstrap sites", "Angular JS web apps", "anything related to Wordpress", "a security camera"];
