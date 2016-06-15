@@ -29,7 +29,7 @@
 			height: 100%;
 			width: 100%;
 
-			background-image: url('img/background/IMG_20160424_162850472.jpg');
+			background-image: url('img/background/IMG_20160609_142711827_HDR.jpg');
 			background-size: cover;
 			background-position: center 0;
 
@@ -57,7 +57,7 @@
 		}
 
 		header .header-content > div.min-height {
-			min-height: 700px;
+			min-height: 500px;
 		}
 
 		header .header-content > div:not(.min-height) {
@@ -82,6 +82,19 @@
 		    color: #333;
 		    text-shadow: -48px -22.4px 178.8px rgba(0,0,0,0.26);
 		    position: relative;
+		}
+
+		header .email a {
+			font-size: 14px;
+			font-weight: 300;
+			font-style: italic;
+			text-decoration: none;
+		    color: #3F408E;
+		}
+
+		header .email a:hover, header .email a:active, header .email a:focus {
+			text-decoration: none;
+			color: #27286B;
 		}
 
 
@@ -130,7 +143,7 @@
 		}
 
 		.competence-icon {
-			width: 150px;
+			width: 125px;
 			max-width: 100%
 		}
 
@@ -214,10 +227,6 @@
 			content: 'Denk Development: ';
 			color: rgb(49, 139, 164);
 			font-weight: bold;
-		}
-
-		.customers .customer-images {
-			margin-top: 40px;
 		}
 
 		.customers .customer-images div {
@@ -387,20 +396,21 @@
 	</style>
 </head>
 <body>
-	<header>
+	<header id="top">
 		<div class="header-bg-image hidden-xs"></div>
 		<div class="header-content">
 			<div class="min-height"></div>
-			<div id="header-fade" style="opacity: 0; "><!-- class added via JavaScript -->
+			<div id="header-fade">
 				<img class="logo-main" src="img/logo.svg" alt="&lt;/&gt; Denk Development"/>
 				<p class="title">Any kind of <strong>hardware</strong> and <strong>software</strong> project.</p>
+				<p class="email"><a href="#get-in-touch">Just looking for an email address?</a></p>
 			</div>
-			<script type="text/javascript" async>
+			<!--<script type="text/javascript" async>
 				setTimeout(function() {
 					document.getElementById('header-fade').className += 'fadeIn fast';
 					document.getElementById('header-fade').style.opacity = '';
 				}, 500);
-			</script>
+			</script>-->
 		</div>
 	</header>
 	<div class="main">
@@ -408,7 +418,7 @@
 			<div>
 				<img src="img/icon.svg" class="top-icon">
 				<h1>What is Denk Development?</h1>
-				<p>Denk Development is a German <strong>hardware and software development company</strong>, operated by me, <a href="http://www.timodenk.com">Timo Denk</a>. It was founded because I got lots of requests from people on the internet who saw my projects, especially on <a href="https://www.youtube.com/watch?v=BzjHiSyrwbY&list=PL4VilVYUVB3N2nihQchovAwaw0vHqhjQe" target="_blank">YouTube</a>, and wanted me to develop stuff for them. In order to do this I founded Denk Development in June&nbsp;2016.</p>
+				<p>Denk Development is a German <strong>hardware and software development company</strong>, operated by me, <a href="http://www.timodenk.com">Timo Denk</a>. It was founded because I got lots of requests from people on the internet who saw my projects, especially on <a href="https://www.youtube.com/watch?v=BzjHiSyrwbY&list=PL4VilVYUVB3N2nihQchovAwaw0vHqhjQe" target="_blank">YouTube</a>, and wanted me to develop stuff for them. In order to do this Denk Development was founded in June&nbsp;2016.</p>
 
 				<p class="how-about top40"><span class="how-about-prefix">How about</span> <span id="how-about-content"></span></p>
 
@@ -430,21 +440,29 @@
 				<h1>Some Example Projects</h1>
 				<p>Here are some examples of what Denk Development does.</p>
 				<div class="row">
-					<div class="col-md-6 customer-dialog top20">
+					<div class="col-sm-4 customer-dialog top20">
 						<p>I need to attach a TFT screen to an Arduino and show game data on it.</p>
 						<p>No problem, can you write a short description of input and corresponding display output?</p>
 						<p>Sure, how long does it take?</p>
 						<p>Approx. three hours.</p>
 					</div>
-					<hr class="hidden visible-xs visible-sm">
-					<div class="col-md-6 customer-dialog top20">
+					<hr class="hidden visible-xs">
+					<div class="col-sm-4 customer-dialog top20">
+						<p>Could you write a slim website, pretty much like yours?</p>
+						<p>Yes, that would take four hours. Any special wishes?</p>
+						<p>A contact form which sends an email to me would be nice.</p>
+						<p>That's no problem. We have a deal</p>
+					</div>
+					<hr class="hidden visible-xs">
+					<div class="col-sm-4 customer-dialog top20">
 						<p>Could you write a slim website, pretty much like yours?</p>
 						<p>Yes, that would take four hours. Any special wishes?</p>
 						<p>A contact form which sends an email to me would be nice.</p>
 						<p>That's no problem. We have a deal</p>
 					</div>
 				</div>
-				<div class="row customer-images">
+				<hr class="top40">
+				<div class="row customer-images top40">
 					<div class="col-xs-6 col-sm-3 vcenter">
 						<a href="http://hatchery.io/" target="_blank" class="full">
 							<img src="img/customer/hatchery.svg">
@@ -469,13 +487,13 @@
 			</div>
 		</section>
 
-		<div class="between-section-img"></div>
+		<div id="get-in-touch" class="between-section-img"></div>
 
 		<section>
 			<div>
 				<h1>Get in Touch</h1>
-				<p>Got a development task?</p>
-				<h4>Contact me via <a href="mailto:development@timodenk.com">development@timodenk.com</a></h4>
+				<p>Got a development task or just a question?</p>
+				<h4>Contact us via <a href="mailto:development@timodenk.com">development@timodenk.com</a></h4>
 			</div>
 		</section>
 
@@ -501,14 +519,18 @@
 					<span class="question">How does hardware exchange work?</span>
 					<span class="answer">Simply sending packets.</span>
 				</p>
+				<hr>
+				<p>
+					Your questions is not listet? <a href="#get-in-touch">Ask us!</a>
+				</p>
 			</div>
 		</section>
 	</div>
 	<footer>
 	    <div class="copyright">
 	        <a class="timodenk" href="http://timodenk.com" target="_blank">Timo Denk</a>
-	        <img src="img/logo-white.svg" alt="&lt;/&gt; Denk Development" />
-	        <a class="legal" href="http://www.simsso.de/?type=impressum" target="_blank">Legal</a>
+	        <a href="#top"><img src="img/logo-white.svg" alt="&lt;/&gt; Denk Development" /></a>
+	        <a class="legal" href="http://timodenk.com/imprint/" target="_blank">Legal.</a>
 	    </div>
 	</footer>
 	
@@ -564,7 +586,7 @@
 			});
 		})();
 
-		(function() {
+		/*(function() {
 			var images = ['IMG_20160424_162850472.jpg', 'IMG_20160609_142711827_HDR.jpg', 'IMG_20160423_204314099_HDR.jpg', 'screenshot_github_shiftregister.jpg', '222823997_1000.jpg', '713218851_27466.jpg', 'IMG_20160211_155425633.jpg', 'IMG_20160609_142736302.jpg', 'IMG_20160609_142949492.jpg'];
 			var indexShown = -1;
 			var fullIteration = false;
@@ -588,7 +610,7 @@
 					}, 1000, indexShown);
 				}
 			}
-		})();
+		})();*/
 
 	    // smooth scrolling of links like <a href="#bla">
 	    var $viewport = $('html, body');
@@ -612,5 +634,40 @@
 	        }
 	    });
 	</script>
+	
+    <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+    <script type="text/javascript">
+        window.cookieconsent_options = {
+            "message": "This website uses cookies to ensure you get the best experience on our website. ",
+            "dismiss": "Got it!",
+            "learnMore": null,
+            "link": "https://en.wikipedia.org/wiki/HTTP_cookie",
+            "theme": "dark-bottom"
+        };
+    </script>
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+    <!-- End Cookie Consent plugin -->
+        
+    <!-- visitors online -->
+    <script src="https://cdn.socket.io/socket.io-1.3.7.js"></script>
+    <script src="http://const.timodenk.com/visitors-online/client.js"></script>
+    <script>
+        // number of visitors has changed
+        window.visitorsOnlineChanged = function(count) {
+            console.log(count);
+        };
+    </script>
+    
+    <!-- analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-37082212-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 </body>
 </html>
