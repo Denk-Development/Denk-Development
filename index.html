@@ -10,7 +10,8 @@
 	<title>Denk Development</title>
 	<link rel="shortcut icon" type="image/png" href="img/icon@2x.png">
 
-	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!--<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">-->
 	
 	<style type="text/css">
 		html, body {
@@ -22,27 +23,6 @@
 			background: #FFF;
 		}
 
-		/*.header-bg-image {
-			position: absolute;
-			top: 0; 
-			left: 0;
-			height: 100%;
-			width: 100%;
-
-			background-image: url('img/header-bg.jpg');
-			background-size: cover;
-			background-position: center 0;
-
-			-webkit-transition: background-image ease-in 1s;
-			transition: background-image ease-in 1s;
-
-		    -webkit-filter: blur(2px);
-		    -moz-filter: blur(2px);
-		    -o-filter: blur(2px);
-		    -ms-filter: blur(2px);
-		    filter: blur(2px);
-		}*/
-
 		header {
 			position: relative;
 			width: 100%;
@@ -51,10 +31,6 @@
 			background-image: url('img/header-bg.jpg');
 			background-size: cover;
 			background-position: center 0;
-		}
-
-		header .header-content {
-			/*background-color: rgba(255, 255, 255, 0.8);*/
 		}
 
 		/* Medium devices (desktops, @screen-md-min and up) */
@@ -420,12 +396,6 @@
 				<p class="title">Any kind of <strong>hardware</strong> and <strong>software</strong> project.</p>
 				<p class="email"><a href="#get-in-touch">Just looking for an email-address?</a></p>
 			</div>
-			<!--<script type="text/javascript" async>
-				setTimeout(function() {
-					document.getElementById('header-fade').className += 'fadeIn fast';
-					document.getElementById('header-fade').style.opacity = '';
-				}, 500);
-			</script>-->
 		</div>
 	</header>
 	<div class="main">
@@ -455,13 +425,6 @@
 				<h1>Some Example Projects</h1>
 				<p>Here are some examples of what Denk Development does.</p>
 				<div class="row">
-					<!--<div class="col-sm-4 customer-dialog top20">
-						<p>I need to attach a TFT screen to an Arduino and show game data on it.</p>
-						<p>No problem, can you write a short description of input and corresponding display output?</p>
-						<p>Sure, how long does it take?</p>
-						<p>Approx. three hours.</p>
-					</div>
-					<hr class="hidden visible-xs">-->
 					<div class="col-sm-6 customer-dialog top20">
 						<p>I need to log some sensor data to an SD card with time and date.</p>
 						<p>Do you have the data format / what's the protocol?</p>
@@ -588,7 +551,8 @@
 	    </div>
 	</footer>
 	
-	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script>if (!window.jQuery) { document.write('<script src="bower_components/jquery/dist/jquery.min.js"><\/script>'); }</script>
 	<script src="bower_components/typed.js/js/typed.js"></script>
 	<script type="text/javascript">
 		window.mobileAndTabletCheck = function() {
