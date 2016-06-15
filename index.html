@@ -33,13 +33,6 @@
 			background-position: center 0;
 		}
 
-		/* Medium devices (desktops, @screen-md-min and up) */
-		@media (min-width: 992px) {
-			header, header .header-content {
-				min-height: 100vh; /* doesn't work well on mobile devices since the screen height changes */
-			}
-		}
-
 		header .header-content > div.min-height {
 			min-height: 500px;
 		}
@@ -78,6 +71,37 @@
 		header .email a:hover, header .email a:active, header .email a:focus {
 			text-decoration: none;
 			color: #27286B;
+		}
+
+		header .how-about {
+			height: 70px; /* prevent height from changing when the text changes */
+		    font-family: monospace;
+		    font-weight: 300;
+		    color: #333;
+		    position: relative;
+		    font-size: 28px;
+		    margin-top: 50px;
+		}
+
+
+		/* Medium devices (desktops, @screen-md-min and up) */
+		@media (min-width: 992px) {
+			header, header .header-content {
+				min-height: 100vh; /* doesn't work well on mobile devices since the screen height changes */
+			}
+		}
+
+		/* Extra small devices only (phones, less than 768px) */
+		@media (max-width: 767px) { 
+			header .title {
+				font-size: 24px;
+				line-height: 30px;
+				margin-top: 30px;
+			}
+
+			header .how-about {
+				font-size: 16px;
+			}
 		}
 
 
@@ -162,15 +186,6 @@
 			color: #333;
 			line-height: 1.75em;
     		font-size: 15px;
-		}
-
-		.how-about {
-			height: 70px; /* prevent height from changing when the text changes */
-		    font-family: monospace;
-		    font-weight: 300;
-		    color: #333;
-		    position: relative;
-		    font-size: 28px !important;
 		}
 		
 		.how-about .how-about-prefix {
@@ -395,6 +410,8 @@
 				<img class="logo-main" src="img/logo.svg" alt="&lt;/&gt; Denk Development"/>
 				<p class="title">Any kind of <strong>hardware</strong> and <strong>software</strong> project.</p>
 				<p class="email"><a href="#get-in-touch">Just looking for an email-address?</a></p>
+
+				<p class="how-about top40"><span class="how-about-prefix">How about</span> <span id="how-about-content"></span></p>
 			</div>
 		</div>
 	</header>
@@ -404,8 +421,6 @@
 				<img src="img/icon.svg" class="top-icon">
 				<h1>What is Denk Development?</h1>
 				<p>Denk Development is a German <strong>hardware and software development company</strong>, operated by me, <a href="http://www.timodenk.com">Timo Denk</a>. It was founded because I got lots of requests from people on the internet who saw my projects, especially on <a href="https://www.youtube.com/watch?v=BzjHiSyrwbY&list=PL4VilVYUVB3N2nihQchovAwaw0vHqhjQe" target="_blank">YouTube</a>, and wanted me to develop stuff for them. In order to do this Denk Development was founded in June&nbsp;2016.</p>
-
-				<p class="how-about top40"><span class="how-about-prefix">How about</span> <span id="how-about-content"></span></p>
 
 				<div class="row top40">
 					<div class="col-xs-6">
@@ -649,7 +664,7 @@
 			var $out = $('#how-about-content');
 
 			if (window.mobileAndTabletCheck()) {
-				$out.html(words[0]);
+				$out.html(words[0] + "?");
 			}
 			else { // typed text only on desktop devices
 				$out.typed({
