@@ -29,18 +29,18 @@
 			height: 100%;
 			width: 100%;
 
-			background-image: url('img/background/IMG_20160609_142711827_HDR.jpg');
+			background-image: url('img/header-bg.jpg');
 			background-size: cover;
 			background-position: center 0;
 
-			-webkit-transition: background-image ease-in 1s;
+			/*-webkit-transition: background-image ease-in 1s;
 			transition: background-image ease-in 1s;
 
 		    -webkit-filter: blur(2px);
 		    -moz-filter: blur(2px);
 		    -o-filter: blur(2px);
 		    -ms-filter: blur(2px);
-		    filter: blur(2px);
+		    filter: blur(2px);*/
 		}
 
 		header {
@@ -52,7 +52,7 @@
 
 		header .header-content {
 			position: relative;
-			background-color: rgba(255, 255, 255, 0.8);
+			/*background-color: rgba(255, 255, 255, 0.8);*/
 			min-height: 100vh;
 		}
 
@@ -71,7 +71,7 @@
 
 		header .logo-main {
 			width: 410px;
-			max-width: 75%;
+			max-width: 90%;
 		}
 
 		header .title {
@@ -405,13 +405,13 @@
 </head>
 <body>
 	<header id="top">
-		<div class="header-bg-image hidden-xs"></div>
+		<div class="header-bg-image"></div>
 		<div class="header-content">
 			<div class="min-height"></div>
 			<div id="header-fade">
 				<img class="logo-main" src="img/logo.svg" alt="&lt;/&gt; Denk Development"/>
 				<p class="title">Any kind of <strong>hardware</strong> and <strong>software</strong> project.</p>
-				<p class="email"><a href="#get-in-touch">Just looking for an email address?</a></p>
+				<p class="email"><a href="#get-in-touch">Just looking for an email-address?</a></p>
 			</div>
 			<!--<script type="text/javascript" async>
 				setTimeout(function() {
@@ -448,25 +448,27 @@
 				<h1>Some Example Projects</h1>
 				<p>Here are some examples of what Denk Development does.</p>
 				<div class="row">
-					<div class="col-sm-4 customer-dialog top20">
+					<!--<div class="col-sm-4 customer-dialog top20">
 						<p>I need to attach a TFT screen to an Arduino and show game data on it.</p>
 						<p>No problem, can you write a short description of input and corresponding display output?</p>
 						<p>Sure, how long does it take?</p>
 						<p>Approx. three hours.</p>
 					</div>
-					<hr class="hidden visible-xs">
-					<div class="col-sm-4 customer-dialog top20">
-						<p>Could you write a slim website, pretty much like yours?</p>
-						<p>Yes, that would take four hours. Any special wishes?</p>
-						<p>A contact form which sends an email to me would be nice.</p>
-						<p>That's no problem. We have a deal</p>
+					<hr class="hidden visible-xs">-->
+					<div class="col-sm-6 customer-dialog top20">
+						<p>I need to log some sensor data to an SD card with time and date.</p>
+						<p>Do you have the data format / what's the protocol?</p>
+						<p>It's an I²C (Inter-Integrated Circuit) sensor.</p>
+						<p>The systems needs an additional real-time module to provide time and date. I could to that in 3 hours.</p>
+						<p>Thanks! Here is the sensor name.</p>
 					</div>
 					<hr class="hidden visible-xs">
-					<div class="col-sm-4 customer-dialog top20">
-						<p>Could you write a slim website, pretty much like yours?</p>
-						<p>Yes, that would take four hours. Any special wishes?</p>
-						<p>A contact form which sends an email to me would be nice.</p>
-						<p>That's no problem. We have a deal</p>
+					<div class="col-sm-6 customer-dialog top20">
+						<p>Can you write a small website that has a contact form?</p>
+						<p>Yes, I can do that with a PHP backend.</p>
+						<p>Perfect, how will it work?</p>
+						<p>If you want plain text emails I would send them with the PHP mail() function. For HTML formatted emails PHPMailer is a good choice.</p>
+						<p>Okay sounds good please get started.</p>
 					</div>
 				</div>
 				<hr class="top40">
@@ -525,7 +527,7 @@
 					<div class="row">
 						<div class="col-sm-10 col-sm-offset-1">
 							<div class="form-group">
-								<textarea class="form-control" id="contact-message" placeholder="Your message" rows="8" required="required"></textarea>
+								<textarea class="form-control" id="contact-message" placeholder="Tell us about your project..." rows="8" required="required"></textarea>
 							</div>
 						</div>
 					</div>
@@ -566,7 +568,7 @@
 				</p>
 				<hr>
 				<p>
-					Your questions is not listet? <a href="#get-in-touch">Ask us!</a>
+					Your questions is not listed? <a href="#get-in-touch">Ask us!</a>
 				</p>
 			</div>
 		</section>
@@ -575,7 +577,7 @@
 	    <div class="copyright">
 	        <a class="timodenk" href="http://timodenk.com" target="_blank">Timo Denk</a>
 	        <a href="#top"><img src="img/logo-white.svg" alt="&lt;/&gt; Denk Development" /></a>
-	        <a class="legal" href="http://timodenk.com/imprint/" target="_blank">Legal.</a>
+	        <a class="legal" href="http://timodenk.com/imprint/" target="_blank">Legal</a>
 	    </div>
 	</footer>
 	
@@ -744,7 +746,7 @@
     <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
     <script type="text/javascript">
         window.cookieconsent_options = {
-            "message": "This website uses cookies to ensure you get the best experience on our website. ",
+            "message": "We uses cookies to ensure you get the best experience on our website. ",
             "dismiss": "Got it!",
             "learnMore": null,
             "link": "https://en.wikipedia.org/wiki/HTTP_cookie",
