@@ -8,7 +8,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Denk Development</title>
-	<link rel="shortcut icon" type="image/png" href="img/icon@2x.png"/>
+	<link rel="shortcut icon" type="image/png" href="img/icon@2x.png">
+
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 	
 	<style type="text/css">
 		html, body {
@@ -54,14 +56,22 @@
 			min-height: 100vh;
 		}
 
-		header .header-content > div {
-			padding: 100px 25px;
+		header .header-content > div.min-height {
+			min-height: 700px;
+		}
+
+		header .header-content > div:not(.min-height) {
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+		    width: 100%;
+		    padding: 0 25px;
 		}
 
 		header .logo-main {
 			width: 410px;
-			max-width: 100%;
-			margin-top: 100px;
+			max-width: 75%;
 		}
 
 		header .title {
@@ -69,12 +79,15 @@
 		    font-weight: 300;
 		    line-height: 60px;
 		    margin-bottom: 100px;
+		    margin-top: 100px;
 		    color: #333;
 		    text-shadow: -48px -22.4px 178.8px rgba(0,0,0,0.26);
 		    position: relative;
 		}
 
 		header .how-about {
+			height: 35px; /* prevent height from changing when the text changes */
+			font-family: monospace;
 			font-size: 35px;
 		    font-weight: 300;
 		    color: #333;
@@ -110,42 +123,140 @@
 			position: relative;
 		}
 
+		.main .between-section-img {
+			position: relative;
+			width: 100%;
+			height: 150px;
+			background-position: center center;
+			background-size: cover;
+		}
+		.main .between-section-img:nth-of-type(1) {
+			background-image: url('img/background/IMG_20160609_142736302.jpg');
+		}
+		.main .between-section-img:nth-of-type(2) {
+			background-image: url('img/background/IMG_20160609_142711827_HDR.jpg');
+		}
+		.main .between-section-img:nth-of-type(3) {
+			background-image: url('img/background/713218851_27466.jpg');
+		}
+
+		.main .between-section-img:after {
+		    content: '';
+		    background: rgba(20, 22, 32, 0.58);
+		    left: 0;
+		    top: 0;
+		    position: absolute;
+		    width: 100%;
+		    height: 100%;
+		}
+
 		.main section {
+			position: relative;
 			margin: 0;
-			padding: 45px 25px;
+			padding: 80px 25px;
 			text-align: center;
 		}
 
+		.main section h1 {
+			color: #505458;
+			font-size: 30px;
+			margin-bottom: 25px;
+		}
+
+		.main section > *:first-child {
+			margin-top: 0;
+		}
+
+		.main section > *:last-child {
+			margin-bottom: 0;
+		}
+
 		.main section > div {
-			max-width: 600px;
+			max-width: 750px;
 			margin: 0 auto;
 		}
 
-		.main section:nth-child(odd) {
-			background-color: rgb(245, 245, 245);
+		.main section:nth-of-type(odd) {
+			background-color: #f9f9f9;
 		}
 
-		.main section:nth-child(even) {
-			background-color: rgb(255, 255, 255);
+		.main section:nth-of-type(even) {
+			background-color: #fff;
 		}
 
 		.main section p {
 			color: #333;
-		    font-size: 12pt;
-		    line-height: 16pt;
+			line-height: 1.75em;
+    		font-size: 15px;
+		}
+
+		.customers .customer-dialog {
+			text-align: left;
+		}
+
+		.customers .customer-dialog p:nth-child(odd)::before {
+			content: 'Customer: ';
+			color: rgb(34, 53, 73);
+			font-weight: bold;
+		}
+
+		.customers .customer-dialog p:nth-child(even)::before {
+			content: 'Denk Development: ';
+			color: rgb(49, 139, 164);
+			font-weight: bold;
+		}
+
+		.customers .customer-images {
+			margin-top: 80px;
+		}
+
+		.customers .customer-images div {
+			padding: 10px;
+			height: 80px;
+		}
+	
+		.customers .customer-images img {
+		    max-width: 100%;
+		    max-height: 100%;
+		    -webkit-filter: grayscale(100%);
+		    filter: grayscale(100%);
+		    opacity: .6;
+
+		    transition: ease-in .2s;
+		    transition-property: -webkit-filter, filter, opacity;
+		}
+
+		.customers .customer-images img:hover {
+		    -webkit-filter: grayscale(0);
+		    filter: grayscale(0);
+		    opacity: 1;
+		}
+
+
+		.faq p {
+			text-align: left;
 		}
 
 		.faq .question {
+			display: block;
 			font-weight: bold;
 			color: #333;
+			font-size: 18px;
 		}
 
-		.faq .question::after {
-			content: ' ';
+		.faq .question::before {
+			content: 'Q. ';
+			color: #43cea2;
 		}
 
 		.faq .answer {
+			color: #393E40;
 			font-style: italic;
+		}
+
+		.faq .answer::before {
+			content: 'A. ';
+			color: #43cea2;
 		}
 
         footer {
@@ -161,6 +272,17 @@
         footer .copyright img {
         	height: 20px;
         	vertical-align: middle;
+        }
+
+        footer .legal {
+        	float: right;
+        	color: #AAA;
+        	transition: color ease-in .2s;
+        }
+
+        footer .legal:hover {
+        	color: #FFF;
+        	text-decoration: none;
         }
 
         @-webkit-keyframes fadeIn {
@@ -211,16 +333,21 @@
 
 		.fast {
 		    -webkit-animation-duration: 1s;
-		    animation-duration: 1s
+		    animation-duration: 1s;
+		}
+
+		.medium {
+		    -webkit-animation-duration: 2.5s;
+		    animation-duration: 2.5s;
 		}
 
 		.slow {
 		    -webkit-animation-duration: 5s;
-		    animation-duration: 5s
+		    animation-duration: 5s;
 		}
 
-		.hidden {
-			display: none;
+		.top20 {
+			margin-top: 20px;
 		}
 	</style>
 </head>
@@ -228,11 +355,12 @@
 	<header>
 		<div class="header-bg-image"></div>
 		<div class="header-content">
-			<div id="header-fade" style="opacity: 0; ">
+			<div class="min-height"></div>
+			<div id="header-fade" style="opacity: 0; "><!-- class added via JavaScript -->
 				<img class="logo-main" src="img/logo.svg" alt="&lt;/&gt; Denk Development"/>
 				<p class="title">Any kind of <strong>hardware</strong> and <strong>software</strong> project.</p>
 
-				<p class="how-about"><span class="how-about-prefix">How about</span> <span id="how-about-content"></span><span id="how-about-cursor" class="typed-cursor">|</span>
+				<p class="how-about"><span class="how-about-prefix">How about</span> <span id="how-about-content"></span></p>
 			</div>
 			<script type="text/javascript" async>
 				setTimeout(function() {
@@ -246,16 +374,58 @@
 		<section>
 			<div>
 				<h1>What is Denk Development?</h1>
-				<p>Denk Development is a German business, operated by me, <a href="http://www.timodenk.com">Timo Denk</a>. It was founded because I got lots of requests from people on the internet who saw my projects, especially on <a href="https://www.youtube.com/watch?v=BzjHiSyrwbY&list=PL4VilVYUVB3N2nihQchovAwaw0vHqhjQe" target="_blank">YouTube</a>, and wanted me to develop stuff for them. In order to do this I founded Denk Development in June 2016.</p>
+				<p>Denk Development is a German <strong>hardware and software development company</strong>, operated by me, <a href="http://www.timodenk.com">Timo Denk</a>. It was founded because I got lots of requests from people on the internet who saw my projects, especially on <a href="https://www.youtube.com/watch?v=BzjHiSyrwbY&list=PL4VilVYUVB3N2nihQchovAwaw0vHqhjQe" target="_blank">YouTube</a>, and wanted me to develop stuff for them. In order to do this I founded Denk Development in June 2016.</p>
 			</div>
 		</section>
-		<section>
+
+		<div class="between-section-img"></div>
+
+		<section class="customers">
 			<div>
 				<h1>Some Example Projects</h1>
-				<p>To get an idea of what I am doing, here are some examples of my commercial projects.</p>
-				<p>Coming soon...</p>
+				<p>Here are some examples of what Denk Development does:</p>
+				<div class="row">
+					<div class="col-md-6 customer-dialog top20">
+						<p>I need to attach a TFT screen to an Arduino and show game data on it.</p>
+						<p>No problem, can you write a short description of input and corresponding display output?</p>
+						<p>Sure, how long does it take?</p>
+						<p>Approx. three hours.</p>
+					</div>
+					<hr class="hidden visible-xs visible-sm">
+					<div class="col-md-6 customer-dialog top20">
+						<p>Could you write a slim website, pretty much like yours?</p>
+						<p>Yes, that would take four hours. Any special wishes?</p>
+						<p>A contact form which sends an email to me would be nice.</p>
+						<p>That's no problem. We have a deal</p>
+					</div>
+				</div>
+				<div class="row customer-images">
+					<div class="col-xs-6 col-sm-3">
+						<a href="http://kreativekiste.de/" target="_blank">
+							<img src="img/customer/kreativekiste.png">
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-3">
+						<a href="http://hatchery.io/" target="_blank">
+							<img src="img/customer/hatchery.svg">
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-3">
+						<a href="http://www.hombach-forsttechnik.de/" target="_blank">
+							<img src="img/customer/hombach-forsttechnik.jpg">
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-3">
+						<a href="http://www.lsd-lasershowdesign.de/" target="_blank">
+							<img src="img/customer/laser-show-design.bmp">
+						</a>
+					</div>
+				</div>
 			</div>
 		</section>
+
+		<div class="between-section-img"></div>
+
 		<section>
 			<div>
 				<h1>Get in Touch</h1>
@@ -263,6 +433,9 @@
 				<h4>Contact me via <a href="mailto:development@timodenk.com">development@timodenk.com</a>.</h4>
 			</div>
 		</section>
+
+		<div class="between-section-img"></div>
+
 		<section class="faq">
 			<div>
 				<h1>Frequently Asked Questions</h1>
@@ -272,7 +445,7 @@
 				</p>
 				<p>
 					<span class="question">How long does it take?</span>
-					<span class="answer">Depends on the project: 1 to 5 hour projecs are usually rushed on the upcoming Saturday.</span>
+					<span class="answer">Depends on the project: 1 to 5 hour projecs are usually rushed on the upcoming Saturday. Bigger tasks can last for a few weeks.</span>
 				</p>
 				<p>
 					<span class="question">How does software exchange work?</span>
@@ -289,10 +462,12 @@
 	<footer>
 	    <div class="copyright">
 	        <img src="img/logo-white.svg" alt="&lt;/&gt; Denk Development" />
+	        <a class="legal" href="http://www.simsso.de/?type=impressum" target="_blank">Legal</a>
 	    </div>
 	</footer>
 	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/typed.js/js/typed.js"></script>
 	<script type="text/javascript">
 		// randomizes array element order in-place
 		Array.prototype.shuffle = function() {
@@ -314,62 +489,33 @@
 		};
 
 		(function() {
-			var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
-			var words = ["Arduino stuff", "the Teensy microcontroller", "a Window desktop app", "a simple website", "blinking LEDs", "an Android app", "Smart Home projects", "a nice website section", "moving servos", "Arduino data transmission", "JavaScript", "PHP", "HTML", "Node.js", "jQuery", "a commandline tool", "Assembly", "SD Card data logging", "remote plug socket control", "Raspberry Pi projects", "2\" TFT displays", "Bootstrap sites", "Angular JS web apps", "anything related to Wordpress", "a security camera"];
+			var words = ["Arduino stuff", "the Teensy microcontroller", "a Windows desktop app", "a simple website", "blinking LEDs", "an Android app", "Smart Home projects", "a nice website section", "moving servos", "Arduino data transmission", "JavaScript", "PHP", "HTML", "Node.js", "jQuery", "a commandline tool", "Assembly", "SD Card data logging", "remote plug socket control", "Raspberry Pi projects", "2\" TFT displays", "Bootstrap sites", "Angular JS web apps", "anything related to Wordpress", "a security camera"];
 			words.shuffle();
 
-			var index = 0;
-			var selectedWord = "";
-			var interval;
-
 			// cache DOM
-			var $out = $('#how-about-content'), $cursor = $('#how-about-cursor');
+			var $out = $('#how-about-content');
 
-			if (isSafari) {
-				setTimeout(function() {
-					$cursor.addClass('hidden');
-					$out.html(words[0] + "?");
-				}, 3000);
-				return; // the following is not supported by Safari
-			}
-
-			function showRandomWord() {
-				if (index != words.length) {
-					index = 0;
-					words.shuffle();
-				}
-				selectedWord = words[index++] + "?";
-				interval = setInterval(showNextChar, 70);
-			}
-
-			function showNextChar() {
-				var shown = $out.html();
-				if (shown.length === selectedWord.length) {
-					clearInterval(interval);
-					setTimeout(removeWord, 1500);
-				}
-				else {
-					$out.html(selectedWord.substring(0, shown.length + 1));
-				}
-			}
-
-			function removeWord() {
-				interval = setInterval(removeLastChar, 20);
-			}
-
-			function removeLastChar() {
-				var shown = $out.html();
-				if (shown.length > 0) {
-					$out.html(shown.substring(0, shown.length - 1));
-				}
-				else {
-					clearInterval(interval);
-					setTimeout(showRandomWord, 500);
-				}
-			}
-
-			setTimeout(showRandomWord, 3000);
+			$out.typed({
+				strings: words,
+	            // typing speed
+	            typeSpeed: 0,
+	            // time before typing starts
+	            startDelay: 2000,
+	            // backspacing speed
+	            backSpeed: 0,
+	            // time before backspacing
+	            backDelay: 1000,
+	            // loop
+	            loop: true,
+	            // false = infinite
+	            loopCount: false,
+	            // show cursor
+	            showCursor: true,
+	            // character for cursor
+	            cursorChar: "|",
+	            // either html or text
+	            contentType: 'text'
+			});
 		})();
 
 		(function() {
@@ -397,6 +543,28 @@
 				}
 			}
 		})();
+
+	    // smooth scrolling of links like <a href="#bla">
+	    var $viewport = $('html, body');
+	    $('a[href*="#"]:not([href="#"])').on('click', function(e) {
+	        if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
+	            var target = $(this.hash);
+	            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	            if (target.length) {
+	                $viewport.animate({ 
+	                    scrollTop: target.offset().top // scroll to target
+	                }, 1000);
+	                e.preventDefault();
+	            }
+	        }
+	    });
+
+	    // stop the animation if the user scrolls
+	    $viewport.bind('scroll mousedown DOMMouseScroll mousewheel keyup touchstart touchmove touchend', function(e) {
+	        if ( e.which > 0 || e.type === 'mousedown' || e.type === 'mousewheel' || e.type === 'touchstart' || e.type === 'touchmove') {
+	            $viewport.stop(); // stop scrollTop animation
+	        }
+	    });
 	</script>
 </body>
 </html>

@@ -1,0 +1,29 @@
+{
+  "name": "denk-development",
+  "authors": [
+    "Timo Denk <simssosdenk@googlemail.com>"
+  ],
+  "description": "The website development.timodenk.com",
+  "main": "index.html",
+  "keywords": [
+    "denk",
+    "development",
+    "hardware",
+    "software",
+    "business"
+  ],
+  "license": "MIT",
+  "homepage": "http://development.timodenk.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "typed.js": "^1.1.1",
+    "bootstrap": "^3.3.6"
+  }
+}
