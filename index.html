@@ -8,10 +8,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Denk Development</title>
-	<link rel="shortcut icon" type="image/png" href="img/icon@2x.png">
+	<link rel="shortcut icon" type="image/png" href="img/favicon.ico">
 
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<!--<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">-->
+	<link rel="stylesheet" href="css/bootstrap-custom.min.css">
 	
 	<style type="text/css">
 		html, body {
@@ -29,6 +28,7 @@
 			text-align: center;
 
 			background-image: url('img/header-bg.jpg');
+			background-attachment: fixed;
 			background-size: cover;
 			background-position: center 0;
 		}
@@ -118,12 +118,14 @@
 		}
 		.main .between-section-img:nth-of-type(1) {
 			background-image: url('img/background/IMG_20160609_142736302_150.jpg');
+			background-position: right;
 		}
 		.main .between-section-img:nth-of-type(2) {
 			background-image: url('img/background/IMG_20160609_142711827_HDR_150.jpg');
 		}
 		.main .between-section-img:nth-of-type(3) {
 			background-image: url('img/background/IMG_20160423_204314099_HDR_150.jpg');
+			background-position: right;
 		}
 
 		.main .between-section-img:after {
@@ -402,7 +404,7 @@
 	</style>
 </head>
 <body>
-	<header id="top">
+	<header id="top" class="parallax">
 		<!--<div class="header-bg-image"></div>-->
 		<div class="header-content">
 			<div class="min-height"></div>
@@ -656,6 +658,7 @@
 		})();
 
 
+		// typed text in the header
 		(function() {
 			var words = ["Arduino stuff", "the Teensy microcontroller", "a Windows desktop app", "a simple website", "blinking LEDs", "an Android app", "Smart Home projects", "a nice website section", "moving servos", "Arduino data transmission", "JavaScript", "PHP", "HTML", "Node.js", "jQuery", "a commandline tool", "Assembly", "SD Card data logging", "remote plug socket control", "Raspberry Pi projects", "2\" TFT displays", "Bootstrap sites", "Angular JS web apps", "anything related to Wordpress", "a security camera"];
 			words.shuffle();
@@ -712,6 +715,32 @@
 	            $viewport.stop(); // stop scrollTop animation
 	        }
 	    });
+
+
+	    // parallax scrolling effect
+	    (function(){
+	    	if (window.mobileAndTabletCheck()) {
+	    		return; // no parallax on mobile devices
+	    	}
+			var parallaxElements = $(".parallax"), defaultSpeed = -0.5;
+			var parallax = [];
+
+			// init
+			for (var i = 0; i < parallaxElements.length; i++) {
+				parallax.push({
+					element: parallaxElements[i],
+					speed: parseFloat(parallaxElements.eq(i).data('speed') || defaultSpeed),
+					offset: parseFloat(parallaxElements.eq(i).data('offset') || '0')
+				});
+			}
+
+			$(window).on('scroll', function() {
+			  	for (var i = 0; i < parallax.length; i++) {
+			  		var backgroundPosition = "50% " + (window.pageYOffset * parallax[i].speed + parallax[i].offset) + "px";
+			  		parallax[i].element.style.backgroundPosition = backgroundPosition;
+			    }
+			}).trigger('scroll');
+		})();
 	</script>
 	
     <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
