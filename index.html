@@ -54,9 +54,12 @@
 			text-align: center;
 
 			background-image: url('img/header-bg.jpg');
-			background-attachment: fixed;
 			background-size: cover;
 			background-position: center 0;
+		}
+
+		header .header-content {
+			padding-top: 25px;
 		}
 
 		header .header-content > div.min-height {
@@ -64,10 +67,11 @@
 		}
 
 		header .header-content > div:not(.min-height) {
-		    position: absolute;
+			/* transform led to blurry text */
+		    /*position: absolute;
 		    top: 50%;
 		    left: 50%;
-		    transform: translate(-50%, -50%);
+		    transform: translate(-50%, -50%);*/
 		    width: 100%;
 		    padding: 0 25px;
 		}
@@ -114,6 +118,13 @@
 		@media (min-width: 992px) {
 			header, header .header-content {
 				min-height: 100vh; /* doesn't work well on mobile devices since the screen height changes */
+			}
+		}
+
+		/* Small devices */
+		@media (max-width: 991px) {
+			header .title {
+				font-size: 28px;
 			}
 		}
 
@@ -434,11 +445,11 @@
 	</style>
 </head>
 <body>
-	<header id="top" class="parallax">
+	<header id="top">
 		<!--<div class="header-bg-image"></div>-->
-		<div class="header-content">
+		<div class="header-content vcenter">
 			<div class="min-height"></div>
-			<div id="header-fade">
+			<div>
 				<img class="logo-main" src="img/logo.svg" alt="&lt;/&gt; Denk Development"/>
 				<p class="title">Any kind of <strong>hardware</strong> and <strong>software</strong> project.</p>
 				<p class="email"><a href="#get-in-touch">Just looking for an email-address?</a></p>
@@ -447,7 +458,7 @@
 			</div>
 		</div>
 	</header>
-	<div class="main">
+	<main class="main">
 		<section>
 			<div>
 				<img src="img/icon.svg" class="top-icon">
@@ -465,7 +476,7 @@
 			</div>
 		</section>
 
-		<div class="between-section-img"></div>
+		<!--<div class="between-section-img"></div>-->
 
 		<section class="customers">
 			<div>
@@ -514,9 +525,9 @@
 			</div>
 		</section>
 
-		<div id="get-in-touch" class="between-section-img"></div>
+		<!--<div class="between-section-img"></div>-->
 
-		<section>
+		<section id="get-in-touch">
 			<div>
 				<h1>Get in Touch</h1>
 				<p>Got a development task or just a question?</p>
@@ -561,7 +572,7 @@
 			</div>
 		</section>
 
-		<div class="between-section-img"></div>
+		<!--<div class="between-section-img"></div>-->
 
 		<section class="faq">
 			<div>
@@ -589,7 +600,7 @@
 				</p>
 			</div>
 		</section>
-	</div>
+	</main>
 	<footer>
 	    <div class="copyright">
 	        <a class="timodenk" href="http://timodenk.com" target="_blank">Timo Denk</a>
@@ -600,7 +611,7 @@
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 	<script>if (!window.jQuery) { document.write('<script src="bower_components/jquery/dist/jquery.min.js"><\/script>'); }</script>
-	<script src="bower_components/typed.js/js/typed.js"></script>
+	<script src="bower_components/typed.js/dist/typed.min.js"></script>
 	<script type="text/javascript">
 		window.mobileAndTabletCheck = function() {
 			var check = false;
@@ -749,6 +760,7 @@
 
 	    // parallax scrolling effect
 	    (function(){
+	    	return; // disabled 
 	    	if (window.mobileAndTabletCheck()) {
 	    		return; // no parallax on mobile devices
 	    	}
