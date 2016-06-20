@@ -22,11 +22,14 @@
     		}
     	}
     	$content .=  "\r\n";
-        $count++;
+
+        if ($value) {
+            $count++;
+        }
     }
 
-    // no data passed (except for site URL) (prevent empty mails)
-    if ($count <= 1) {
+    // no data passed
+    if ($count < 1) {
         echo 'No data passed...';
         exit();
     }
