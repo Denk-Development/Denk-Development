@@ -1,3 +1,4 @@
+<?php include('backend/lang/lang.inc.php'); ?>
 <!doctype html>
 <html itemscope itemtype="http://schema.org/Organization" lang="en">
 <head>
@@ -523,10 +524,10 @@
 			<div class="min-height"></div>
 			<div>
 				<img class="logo-main" src="img/logo.svg" alt="&lt;/&gt; Denk Development"/>
-				<p class="title">Any kind of <strong>hardware</strong> and <strong>software</strong> project.</p>
-				<p class="how-about top40"><span class="how-about-prefix">How about</span> <span id="how-about-content"></span></p>
+				<p class="title"><? l('HeaderTitle') ?></p>
+				<p class="how-about top40"><span class="how-about-prefix"><? l('HowAbout') ?></span> <span id="how-about-content"></span></p>
 
-				<p class="email"><a href="#get-in-touch">Seeking for email contact? Click here.</a></p>
+				<p class="email"><a href="#get-in-touch"><? l('SeekingForEmailContact'); ?></a></p>
 			</div>
 		</div>
 	</header>
@@ -534,8 +535,8 @@
 		<section>
 			<div>
 				<img src="img/icon.svg" class="top-icon">
-				<h1>What is Denk Development?</h1>
-				<p>Denk Development is a German <strong>hardware and software development company</strong>, operated by <a href="http://www.timodenk.com">Timo Denk</a>. It was founded in June 2016 because many people were requesting critical support for their projects.</p>
+				<h1><? l('WhatIsDenkDevHeading'); ?></h1>
+				<p><? l('WhatIsDenkDevParagraph'); ?></p>
 
 				<div class="row top40">
 					<div class="col-xs-6">
@@ -563,23 +564,15 @@
 		<section class="customers">
 			<div>
 				<img src="img/icon.svg" class="top-icon">
-				<h1>Some Example Projects</h1>
-				<p>Here are some examples of what Denk Development offers.</p>
+				<h1><? l('ExamplesHeading'); ?></h1>
+				<p><? l('ExamplesSubtitle'); ?></p>
 				<div class="row">
 					<div class="col-sm-6 customer-dialog top20">
-						<p>I need to log some sensor data to an SD card with time and date.</p>
-						<p>Do you have the data format / what's the protocol?</p>
-						<p>It's an I²C (Inter-Integrated Circuit) sensor.</p>
-						<p>The systems needs an additional real-time module to provide time and date. I could do that in 3 hours.</p>
-						<p>Thanks! Here is the sensor name.</p>
+						<? l('ExamplesDialogSensorDataLogging'); ?>
 					</div>
 					<hr class="hidden visible-xs">
 					<div class="col-sm-6 customer-dialog top20">
-						<p>Can you write a small website that has a contact form?</p>
-						<p>Yes, I can do that with a PHP backend.</p>
-						<p>Perfect, how will it work?</p>
-						<p>If you want plain text emails, I would send them with the PHP mail() function. For HTML formatted emails, PHPMailer is a good choice.</p>
-						<p>Okay, sounds good, please get started.</p>
+						<? l('ExamplesDialogWebsiteWithContactForm'); ?>
 					</div>
 				</div>
 				<hr class="top40">
@@ -613,8 +606,8 @@
 		<section id="get-in-touch">
 			<div>
 				<img src="img/icon.svg" class="top-icon">
-				<h1>Get in Touch</h1>
-				<p>Got a development task or just a question?</p>
+				<h1><? l('ContactHeading'); ?></h1>
+				<p><? l('ContactSubtitle'); ?></p>
 				<h3><a href="mailto:development@timodenk.com" target="_blank">development@timodenk.com</a></h3>
 				<hr>
 				<form id="contact-form">
@@ -622,16 +615,16 @@
 						<div class="col-sm-5 col-sm-offset-1">
 							<div class="form-group">
 								<div class="input-group">
-									<div class="input-group-addon">Name</div>
-									<input type="text" class="form-control" id="contact-name" placeholder="John Q. Public" required="required">
+									<div class="input-group-addon"><? l('Name'); ?></div>
+									<input type="text" class="form-control" id="contact-name" placeholder="<? l('NamePlaceholder'); ?>" required="required">
 								</div>
 							</div>
 						</div>
 						<div class="col-sm-5">
 							<div class="form-group">
 								<div class="input-group">
-									<div class="input-group-addon">Email-Address</div>
-									<input type="email" class="form-control" id="contact-email" placeholder="email@domain.com" required="required">
+									<div class="input-group-addon"><? l('EmailAddress'); ?></div>
+									<input type="email" class="form-control" id="contact-email" placeholder="<? l('EmailAddressPlaceholder'); ?>" required="required">
 								</div>
 							</div>
 						</div>
@@ -639,16 +632,16 @@
 					<div class="row">
 						<div class="col-sm-10 col-sm-offset-1">
 							<div class="form-group">
-								<textarea class="form-control" id="contact-message" placeholder="Tell us about your project..." rows="8" required="required"></textarea>
+								<textarea class="form-control" id="contact-message" placeholder="<? l('MessagePlaceholder'); ?>" rows="8" required="required"></textarea>
 							</div>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-sm-4 col-sm-offset-4">
-							<p id="contact-success-msg" class="success hidden">Your message has been sent, thanks for contacting us.</p>
-							<p id="contact-error-msg" class="danger hidden">An error occured. Please <a href="mailto:development@timodenk.com" target="_blank">go the traditional way and send an email</a>.</p>
+							<p id="contact-success-msg" class="success hidden"><? l('ContactSuccess'); ?></p>
+							<p id="contact-error-msg" class="danger hidden"><? l('ContactError'); ?></p>
 							<div class="form-group">
-								<input type="submit" id="contact-submit" class="btn btn-primary full-width" value="Send" disabled="disabled">
+								<input type="submit" id="contact-submit" class="btn btn-primary full-width" value="<? l('ContactSubmit'); ?>" disabled="disabled">
 							</div>
 						</div>
 					</div>
@@ -661,29 +654,25 @@
 		<section class="faq">
 			<div>
 				<img src="img/icon.svg" class="top-icon">
-				<h1>Frequently Asked Questions</h1>
+				<h1><? l('FAQHeading'); ?></h1>
 				<p>
-					<span class="question">What is the price range?</span>
-					<span class="answer">Anything from €25 to €1.000 is well within range.</span>
+					<span class="question"><? l('FAQPriceQuestion'); ?></span>
+					<span class="answer"><? l('FAQPriceAnswer'); ?></span>
 				</p>
 				<p>
-					<span class="question">How long does it take?</span>
-					<span class="answer">Depends on the project: 1 to 5 hour projects are usually rushed on the upcoming Saturday. Bigger tasks may
-					 last a few weeks.</span>
+					<span class="question"><? l('FAQDurationQuestion'); ?></span>
+					<span class="answer"><? l('FAQDurationAnswer'); ?></span>
 				</p>
 				<p>
-					<span class="question">How does software exchange work?</span>
-					<span class="answer">Because many projects involve multiple testing cycles,
-					 code is generally exchanged via <a href="https://github.com/Simsso" target="_blank">GitHub</a>.</span>
+					<span class="question"><? l('FAQSoftwareExchangeQuestion'); ?></span>
+					<span class="answer"><? l('FAQSoftwareExchangeAnswer'); ?></span>
 				</p>
 				<p>
-					<span class="question">How does hardware exchange work?</span>
-					<span class="answer">Simply sending packets.</span>
+					<span class="question"><? l('FAQHardwareExchangeQuestion'); ?></span>
+					<span class="answer"><? l('FAQHardwareExchangeAnswer'); ?></span>
 				</p>
 				<hr>
-				<p>
-					Your questions is not listed? <a href="#get-in-touch">Ask us!</a>
-				</p>
+				<p><? l('QuestionNotListed'); ?></p>
 			</div>
 		</section>
 	</main>
@@ -691,7 +680,7 @@
 	    <div class="copyright">
 	        <a class="timodenk" href="http://timodenk.com" target="_blank">Timo Denk</a>
 	        <a href="#top">&copy; Denk Development</a>
-	        <a class="legal" href="http://timodenk.com/imprint/" target="_blank">Legal</a>
+	        <a class="legal" href="http://timodenk.com/imprint/" target="_blank"><? l('Legal'); ?></a>
 	    </div>
 	</footer>
 	
@@ -787,7 +776,12 @@
 
 		// typed text in the header
 		(function() {
-			var words = ["Arduino stuff", "the Teensy microcontroller", "a Windows desktop app", "a simple website", "blinking LEDs", "an Android app", "Smart Home projects", "a nice website section", "moving servos", "Arduino data transmission", "JavaScript", "PHP", "HTML", "Node.js", "jQuery", "a commandline tool", "Assembly", "SD Card data logging", "remote plug socket control", "Raspberry Pi projects", "2\" TFT displays", "Bootstrap sites", "Angular JS web apps", "anything related to Wordpress", "a security camera"];
+			var wordsRaw = '<? l('HowAboutIdeas'); ?>';
+			var words = wordsRaw.split(';');
+			// append a questionmark to every idea
+			for (var i = 0; i < words.length; i++) {
+				words[i] += "?";
+			}
 			words.shuffle();
 
 			// cache DOM
