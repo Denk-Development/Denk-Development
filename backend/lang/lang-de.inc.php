@@ -3,14 +3,15 @@
 // header
 $l['SeekingForEmailContact'] = 'Auf der Suche nach einer Email-Adresse zur Kontaktaufnahme?';
 $l['HeaderTitle'] = 'Jede Art von <strong>Hardware</strong> und <strong>Software</strong> Projekt.';
-$l['HowAbout'] = 'Wie wär\'s mit';
-$l['HowAboutIdeas'] = 'Arduino Projekten; dem Teensy Mikrocontroller; einer Windows Desktop Anwendung; einer schlanken Website; blinkenden LEDs; einer Android App; Smart Home Projekten; einer schicken Website Section; bewegten Servos; Arduino Datenübertragung; JavaScript; PHP; HTML; Node.js; jQuery; einer Kommandozeilen Anwendung; Assembler; einem SD Karten Datenlogger; Funksteckdosen Steuerung; Raspberry Pi Projekten; 2&quot; TFT Displays; Bootstrap Seiten; Angular JS Web Apps; etwas im Zusammenhang mit Wordpress; einer Überwachungskamera';
+$l['HowAbout'] = 'Wie wäre es mit';
+$l['HowAboutIdeas'] = 'Arduino Projekten; dem Teensy Mikrocontroller; einer Windows Desktop Anwendung; einer schlanken Website; blinkenden LEDs; einer Android App; Smart Home Projekten; einer schicken Website Section; bewegten Servos; Arduino Datenübertragung; JavaScript; PHP; HTML; Node.js; jQuery; einer Kommandozeilen Anwendung; Assembler; einem SD Karten Datenlogger; Funksteckdosen Steuerung; Raspberry Pi Projekten; 2&quot; TFT Displays; Bootstrap Seiten; Angular JS Web Apps; einer Überwachungskamera';
 
 // about
 $l['WhatIsDenkDevHeading'] = 'Was ist Denk Development?';
-$l['WhatIsDenkDevParagraph'] = 'Denk Development ist eine deutsche <strong>Hardware- und Software-Entwicklungsfirma</strong>, die von <a href="http://www.timodenk.com">Timo Denk</a> geleitet wird. Sie wurde im Juni 2016 gegründet, da viele spätere Kunden Projektanfragen stellten.';
+$l['WhatIsDenkDevParagraph'] = 'Denk Development ist eine deutsche <strong>Hardware- und Software-Entwicklungsfirma</strong>, die von <a href="http://www.timodenk.com">Timo Denk</a> geleitet wird. Seit Ihrer Gründung steht sie für hochqualitative Lösungen auf großer Brandbreite.';
 
 // examples
+$l['Customer'] = 'Kunde';
 $l['ExamplesHeading'] = 'Einige Beispiel-Projekte';
 $l['ExamplesSubtitle'] = 'Hier finden Sie einige Beispiele aus dem Angebotsspektrum von Denk Development.';
 $l['ExamplesDialogSensorDataLogging'] = '<p>Ich muss die Werte eines Sensors auf einer SD Karte loggen, mit Uhrzeit und Datum.</p>
@@ -21,7 +22,7 @@ $l['ExamplesDialogSensorDataLogging'] = '<p>Ich muss die Werte eines Sensors auf
 $l['ExamplesDialogWebsiteWithContactForm'] = '<p>Können Sie eine schlanke Website mit Kontakt Formular programmieren?</p>
 	<p>Ja, wir könnten das mit PHP Server umsetzen.</p>
 	<p>Perfekt, wie würde das genau funktionieren?</p>
-	<p>Falls Sie reine Text-Email versenden möchten, würden wir die PHP mail() Funktion verwenden. Für HTML Mails würde sich die Verwendung von PHPMailer anbieten.</p>
+	<p>Falls Sie eine reine Text-Email versenden möchten, würden wir die PHP mail() Funktion verwenden. Für HTML Mails würde sich die Verwendung von PHPMailer anbieten.</p>
 	<p>Okay, klingt super! Feuer frei.</p>';
 
 // contact

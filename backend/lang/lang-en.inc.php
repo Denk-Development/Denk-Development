@@ -11,6 +11,7 @@ $l['WhatIsDenkDevHeading'] = 'What is Denk Development?';
 $l['WhatIsDenkDevParagraph'] = 'Denk Development is a German <strong>hardware and software development company</strong>, operated by <a href="http://www.timodenk.com">Timo Denk</a>. It was founded in June 2016 because many people were requesting critical support for their projects.';
 
 // examples
+$l['Customer'] = 'Customer';
 $l['ExamplesHeading'] = 'Some Example Projects';
 $l['ExamplesSubtitle'] = 'Here are some examples of what Denk Development offers.';
 $l['ExamplesDialogSensorDataLogging'] = '<p>I need to log some sensor data to an SD card with time and date.</p>

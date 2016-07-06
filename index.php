@@ -253,7 +253,7 @@
 		}
 
 		.customers .customer-dialog p:nth-child(odd)::before {
-			content: 'Customer: ';
+			content: '<? l('Customer'); ?>: ';
 			color: rgb(34, 53, 73);
 			font-weight: bold;
 		}
@@ -788,7 +788,7 @@
 			var $out = $('#how-about-content');
 
 			if (window.mobileAndTabletCheck()) {
-				$out.html(words[0] + "?");
+				$out.html(words[0]);
 			}
 			else { // typed text only on desktop devices
 				$out.typed({
