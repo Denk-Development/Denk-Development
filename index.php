@@ -523,7 +523,7 @@
 		<div class="header-content vcenter">
 			<div class="min-height"></div>
 			<div>
-				<img class="logo-main" src="img/logo.svg" alt="&lt;/&gt; Denk Development"/>
+				<img class="logo-main" src="img/logo.svg" alt="&lt;/&gt; Denk Development" alt="Denk Development" />
 				<p class="title"><? l('HeaderTitle') ?></p>
 				<p class="how-about top40"><span class="how-about-prefix"><? l('HowAbout') ?></span> <span id="how-about-content"></span></p>
 
@@ -534,7 +534,7 @@
 	<main class="main">
 		<section>
 			<div>
-				<img src="img/icon.svg" class="top-icon">
+				<img src="img/icon.svg" class="top-icon" alt="Denk Development Icon">
 				<h1><? l('WhatIsDenkDevHeading'); ?></h1>
 				<p><? l('WhatIsDenkDevParagraph'); ?></p>
 
@@ -563,7 +563,7 @@
 
 		<section class="customers">
 			<div>
-				<img src="img/icon.svg" class="top-icon">
+				<img src="img/icon.svg" class="top-icon" alt="Denk Development Icon">
 				<h1><? l('ExamplesHeading'); ?></h1>
 				<p><? l('ExamplesSubtitle'); ?></p>
 				<div class="row">
@@ -579,22 +579,22 @@
 				<div class="row customer-images">
 					<div class="col-xs-6 col-sm-3 vcenter">
 						<a href="http://hatchery.io/" target="_blank" class="full">
-							<img src="img/customer/hatchery.min.svg">
+							<img src="img/customer/hatchery.min.svg" alt="hatchery">
 						</a>
 					</div>
 					<div class="col-xs-6 col-sm-3 vcenter">
 						<a href="http://www.hombach-forsttechnik.de/" target="_blank">
-							<img src="img/customer/hombach-forsttechnik.jpg">
+							<img src="img/customer/hombach-forsttechnik.jpg" alt="Hombach Forsttechnik">
 						</a>
 					</div>
 					<div class="col-xs-6 col-sm-3 vcenter">
 						<a href="http://kreativekiste.de/" target="_blank">
-							<img src="img/customer/kreativekiste.png">
+							<img src="img/customer/kreativekiste.png" alt="Kreative Kiste">
 						</a>
 					</div>
 					<div class="col-xs-6 col-sm-3 vcenter">
 						<a href="http://www.lsd-lasershowdesign.de/" target="_blank" class="full">
-							<img src="img/customer/lsd.min.svg">
+							<img src="img/customer/lsd.min.svg" alt="Laster Show Design">
 						</a>
 					</div>
 				</div>
@@ -605,7 +605,7 @@
 
 		<section id="get-in-touch">
 			<div>
-				<img src="img/icon.svg" class="top-icon">
+				<img src="img/icon.svg" class="top-icon" alt="Denk Development Icon">
 				<h1><? l('ContactHeading'); ?></h1>
 				<p><? l('ContactSubtitle'); ?></p>
 				<h3><a href="mailto:development@timodenk.com" target="_blank">development@timodenk.com</a></h3>
@@ -653,7 +653,7 @@
 
 		<section class="faq">
 			<div>
-				<img src="img/icon.svg" class="top-icon">
+				<img src="img/icon.svg" class="top-icon" alt="Denk Development Icon">
 				<h1><? l('FAQHeading'); ?></h1>
 				<p>
 					<span class="question"><? l('FAQPriceQuestion'); ?></span>
