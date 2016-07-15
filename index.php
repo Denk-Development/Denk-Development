@@ -523,7 +523,7 @@
 		<div class="header-content vcenter">
 			<div class="min-height"></div>
 			<div>
-				<img class="logo-main" src="img/logo.svg" alt="&lt;/&gt; Denk Development" alt="Denk Development" />
+				<img class="logo-main" src="img/logo.svg" alt="&lt;/&gt; Denk Development" />
 				<p class="title"><? l('HeaderTitle') ?></p>
 				<p class="how-about top40"><span class="how-about-prefix"><? l('HowAbout') ?></span> <span id="how-about-content"></span></p>
 

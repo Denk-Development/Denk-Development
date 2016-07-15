@@ -4,7 +4,7 @@
 $l['SeekingForEmailContact'] = 'Auf der Suche nach einer Email-Adresse zur Kontaktaufnahme?';
 $l['HeaderTitle'] = 'Jede Art von <strong>Hardware</strong> und <strong>Software</strong> Projekt.';
 $l['HowAbout'] = 'Wie wäre es mit';
-$l['HowAboutIdeas'] = 'Arduino Projekten; dem Teensy Mikrocontroller; einer Windows Desktop Anwendung; einer schlanken Website; blinkenden LEDs; einer Android App; Smart Home Projekten; einer schicken Website Section; bewegten Servos; Arduino Datenübertragung; JavaScript; PHP; HTML; Node.js; jQuery; einer Kommandozeilen Anwendung; Assembler; einem SD Karten Datenlogger; Funksteckdosen Steuerung; Raspberry Pi Projekten; 2&quot; TFT Displays; Bootstrap Seiten; Angular JS Web Apps; einer Überwachungskamera';
+$l['HowAboutIdeas'] = 'Arduino Projekten; dem Teensy Mikrocontroller; einer Windows Desktop Anwendung; einer schlanken Website; blinkenden LEDs; einer Android App; Smart Home Projekten; einer schicken Website Section; bewegten Servos; Arduino Datenübertragung; JavaScript; PHP; HTML; Node.js; jQuery; einer Kommandozeilen Anwendung; Assembler; einem SD Karten Datenlogger; Funksteckdosen Steuerung; Raspberry Pi Projekten; 2" TFT Displays; Bootstrap Seiten; Angular JS Web Apps; einer Überwachungskamera';
 
 // about
 $l['WhatIsDenkDevHeading'] = 'Was ist Denk Development?';
