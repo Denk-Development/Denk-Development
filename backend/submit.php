@@ -23,7 +23,7 @@
     	}
     	$content .=  "\r\n";
 
-        if ($value) {
+        if (!empty($value)) {
             $count++;
         }
     }
@@ -37,7 +37,7 @@
     $headers =  'MIME-Version: 1.0' . "\r\n" .
 	            'Content-type: text/plain; charset=utf-8' . "\r\n" .
 	            'Content-Transfer-Encoding: quoted-printable' . "\r\n" .
-	            'From: ' . $from . "\r\n" .
+	            'From: mail@timodenk.com' . "\r\n" .
 	            'Reply-To: ' . $from . "\r\n" .
 	            'X-Mailer: PHP/' . phpversion();
     
