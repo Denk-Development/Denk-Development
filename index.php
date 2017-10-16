@@ -551,7 +551,7 @@
 						<div class="ch-item ci-2 pull-left">
 							<div class="ch-info">
 								<h3>Hardware</h3>
-								<p class="small-text">Arduino &middot; AVR &middot; Teensy</p>
+								<p class="small-text">Arduino &middot; AVR &middot; ESP32</p>
 							</div>
 						</div>
 					</div>
