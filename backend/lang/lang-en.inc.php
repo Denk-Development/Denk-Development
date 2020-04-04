@@ -2,13 +2,13 @@
 
 // header
 $l['SeekingForEmailContact'] = 'Seeking for email contact? Click here.';
-$l['HeaderTitle'] = 'Any kind of <strong>hardware</strong> and <strong>software</strong> project.';
+$l['HeaderTitle'] = '<strong>Hardware</strong> and <strong>Software</strong> Projects';
 $l['HowAbout'] = 'How about';
-$l['HowAboutIdeas'] = 'Arduino stuff; the Teensy microcontroller; a Windows desktop app; a simple website; blinking LEDs; an Android app; Smart Home projects; a nice website section; moving servos; Arduino data transmission; JavaScript; PHP; HTML; Node.js; jQuery; a commandline tool; Assembly; SD Card data logging; remote plug socket control; Raspberry Pi projects; 2" TFT displays; Bootstrap sites; Angular JS web apps; anything related to Wordpress; a security camera';
+$l['HowAboutIdeas'] = 'a serverless function; a landing page; an LED status indicator; a data logger; an Arduino servo remote control; a board came control software; an airplane cabin pressure control system; Arduino projects; the Teensy microcontroller; a Windows desktop app; a simple website; blinking LEDs; an Android app; Smart Home projects; a nice website section; moving servos; Arduino data transmission; JavaScript; PHP; HTML; Node.js; jQuery; a commandline tool; Assembly; SD Card data logging; remote plug socket control; Raspberry Pi projects; 2" TFT displays; Bootstrap sites; Angular JS web apps; anything related to Wordpress; a security camera';
 
 // about
 $l['WhatIsDenkDevHeading'] = 'What is Denk Development?';
-$l['WhatIsDenkDevParagraph'] = 'Denk Development is a German <strong>hardware and software development company</strong>, operated by <a href="http://www.timodenk.com">Timo Denk</a>. It was founded in June 2016 because many people were requesting critical support for their projects.';
+$l['WhatIsDenkDevParagraph'] = 'Denk Development is a German <strong>hardware and software development company</strong>, operated by me, <a href="http://www.timodenk.com">Timo Denk</a>. It is my secondary employment and was founded in June 2016 because many people were requesting critical support for their projects. Since then I have completed over 50 projects successfully.';
 
 // examples
 $l['Customer'] = 'Customer';

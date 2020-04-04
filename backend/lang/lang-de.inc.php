@@ -2,13 +2,13 @@
 
 // header
 $l['SeekingForEmailContact'] = 'Auf der Suche nach einer Email-Adresse zur Kontaktaufnahme?';
-$l['HeaderTitle'] = 'Jede Art von <strong>Hardware</strong> und <strong>Software</strong> Projekt.';
+$l['HeaderTitle'] = '<strong>Hardware</strong> und <strong>Software</strong> Projekte';
 $l['HowAbout'] = 'Wie wäre es mit';
-$l['HowAboutIdeas'] = 'Arduino Projekten; dem Teensy Mikrocontroller; einer Windows Desktop Anwendung; einer schlanken Website; blinkenden LEDs; einer Android App; Smart Home Projekten; einer schicken Website Section; bewegten Servos; Arduino Datenübertragung; JavaScript; PHP; HTML; Node.js; jQuery; einer Kommandozeilen Anwendung; Assembler; einem SD Karten Datenlogger; Funksteckdosen Steuerung; Raspberry Pi Projekten; 2" TFT Displays; Bootstrap Seiten; Angular JS Web Apps; einer Überwachungskamera';
+$l['HowAboutIdeas'] = 'einer Serverless Function; einer Landingpage; einer LED Statusleuchte; einem Datenlogger; einer Arduino-Servo-Kontrollsoftware; einer Brettspiel-Software; einem Kontrollsystem für Flugzeugkabinendruck; Arduino Projekten; dem Teensy Mikrocontroller; einer Windows Desktop Anwendung; einer schlanken Website; blinkenden LEDs; einer Android App; Smart Home Projekten; einer schicken Website Section; bewegten Servos; Arduino Datenübertragung; JavaScript; PHP; HTML; Node.js; jQuery; einer Kommandozeilen Anwendung; Assembler; einem SD Karten Datenlogger; Funksteckdosen Steuerung; Raspberry Pi Projekten; 2" TFT Displays; Bootstrap Seiten; Angular JS Web Apps; einer Überwachungskamera';
 
 // about
 $l['WhatIsDenkDevHeading'] = 'Was ist Denk Development?';
-$l['WhatIsDenkDevParagraph'] = 'Denk Development ist eine deutsche <strong>Hardware- und Software-Entwicklungsfirma</strong>, die von <a href="http://www.timodenk.com">Timo Denk</a> geleitet wird. Seit Ihrer Gründung steht sie für hochqualitative Lösungen auf großer Brandbreite.';
+$l['WhatIsDenkDevParagraph'] = 'Denk Development ist eine deutsche <strong>Hardware- und Software-Entwicklungsfirma</strong>, die von mir, <a href="http://www.timodenk.com">Timo Denk</a>, als Nebentätigkeit betrieben wird. Seit der Gründung im Juni 2016 wurden über 50 Projekte erfolgreich abgeschlossen.';
 
 // examples
 $l['Customer'] = 'Kunde';
