@@ -14,16 +14,16 @@ $l['WhatIsDenkDevParagraph'] = 'Denk Development is a German <strong>hardware an
 $l['Customer'] = 'Customer';
 $l['ExamplesHeading'] = 'Some Example Projects';
 $l['ExamplesSubtitle'] = '<a href="https://timodenk.com/blog/denkdev-turns-four/" target="_blank">This blog post</a> contains a selection of five projects that were completed successfully in the past. Below are some simplified dialoges which you might have with Denk Development:';
-$l['ExamplesDialogSensorDataLogging'] = '<p>I need to log some sensor data to an SD card with time and date.</p>
+$l['ExamplesDialogSensorDataLogging'] = '<p><span class="customer">Customer:</span> I need to log some sensor data to an SD card with time and date.</p>
 	<p>Do you have the data format / what is the protocol?</p>
-	<p>It is an I²C (Inter-Integrated Circuit) sensor.</p>
+	<p><span class="customer">Customer:</span> It is an I²C (Inter-Integrated Circuit) sensor.</p>
 	<p>The systems needs an additional real-time module to provide time and date. I could do that in 3 hours.</p>
-	<p>Thanks! Here is the sensor name.</p>';
-$l['ExamplesDialogWebsiteWithContactForm'] = '<p>Can you write a small website that has a contact form?</p>
+	<p><span class="customer">Customer:</span> Thanks! Here is the sensor name.</p>';
+$l['ExamplesDialogWebsiteWithContactForm'] = '<p><span class="customer">Customer:</span> Can you write a small website that has a contact form?</p>
 	<p>Yes, I can do that with a PHP backend.</p>
-	<p>Perfect, how will it work?</p>
+	<p><span class="customer">Customer:</span> Perfect, how will it work?</p>
 	<p>If you want plain text emails, I would send them with the PHP mail() function. For HTML formatted emails, PHPMailer is a good choice.</p>
-	<p>Okay, sounds good, please get started.</p>';
+	<p><span class="customer">Customer:</span> Okay, sounds good, please get started.</p>';
 
 // contact
 $l['ContactHeading'] = 'Get in Touch';

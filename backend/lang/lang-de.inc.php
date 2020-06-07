@@ -14,16 +14,16 @@ $l['WhatIsDenkDevParagraph'] = 'Denk Development ist eine deutsche <strong>Hardw
 $l['Customer'] = 'Kunde';
 $l['ExamplesHeading'] = 'Einige Beispiel-Projekte';
 $l['ExamplesSubtitle'] = '<a href="https://timodenk.com/blog/denkdev-turns-four/" target="_blank">Dieser Blog Post (Englisch)</a> listet eine Auswahl von fünf erfolgreich abgeschlossenen Projekten auf. Hier finden Sie noch zwei beispielhafte Dialoge die Sie mit Denk Development haben könnten:';
-$l['ExamplesDialogSensorDataLogging'] = '<p>Ich muss die Werte eines Sensors auf einer SD Karte loggen, mit Uhrzeit und Datum.</p>
+$l['ExamplesDialogSensorDataLogging'] = '<p><span class="customer">Kunde:</span> Ich muss die Werte eines Sensors auf einer SD Karte loggen, mit Uhrzeit und Datum.</p>
 	<p>Mit welcher Schnittstelle arbeitet der Sensor?</p>
-	<p>Es handelt sich um einen I²C (Inter-Integrated Circuit) Sensor.</p>
+	<p><span class="customer">Kunde:</span> Es handelt sich um einen I²C (Inter-Integrated Circuit) Sensor.</p>
 	<p>Das System braucht zusätzlich noch ein Real-Time Modul, um Uhrzeit und Datum bereit zu stellen. Wir könnten das ganze in drei Stunden umsetzen.</p>
-	<p>Vielen Dank! Hier finden Sie den Sensor.</p>';
-$l['ExamplesDialogWebsiteWithContactForm'] = '<p>Können Sie eine schlanke Website mit Kontakt Formular programmieren?</p>
+	<p><span class="customer">Kunde:</span> Vielen Dank! Hier finden Sie den Sensor.</p>';
+$l['ExamplesDialogWebsiteWithContactForm'] = '<p><span class="customer">Kunde:</span> Können Sie eine schlanke Website mit Kontakt Formular programmieren?</p>
 	<p>Ja, wir könnten das mit PHP Server umsetzen.</p>
-	<p>Perfekt, wie würde das genau funktionieren?</p>
+	<p><span class="customer">Kunde:</span> Perfekt, wie würde das genau funktionieren?</p>
 	<p>Falls Sie eine reine Text-Email versenden möchten, würden wir die PHP mail() Funktion verwenden. Für HTML Mails würde sich die Verwendung von PHPMailer anbieten.</p>
-	<p>Okay, klingt super! Feuer frei.</p>';
+	<p><span class="customer">Kunde:</span> Okay, klingt super! Feuer frei.</p>';
 
 // contact
 $l['ContactHeading'] = 'Kontakt';

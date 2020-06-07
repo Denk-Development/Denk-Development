@@ -210,8 +210,7 @@ header .how-about {
     text-align: left;
 }
 
-.customers .customer-dialog p:nth-child(odd)::before {
-    content: '<? l('Customer'); ?>: ';
+.customers .customer-dialog p:nth-child(odd) span.customer {
     color: rgb(34, 53, 73);
     font-weight: bold;
 }
