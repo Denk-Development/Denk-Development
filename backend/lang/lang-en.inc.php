@@ -13,7 +13,7 @@ $l['WhatIsDenkDevParagraph'] = 'Denk Development is a German <strong>hardware an
 // examples
 $l['Customer'] = 'Customer';
 $l['ExamplesHeading'] = 'Some Example Projects';
-$l['ExamplesSubtitle'] = 'Here are some examples of what Denk Development offers.';
+$l['ExamplesSubtitle'] = '<a href="https://timodenk.com/blog/denkdev-turns-four/" target="_blank">This blog post</a> contains a selection of five projects that were completed successfully in the past. Below are some simplified dialoges which you might have with Denk Development:';
 $l['ExamplesDialogSensorDataLogging'] = '<p>I need to log some sensor data to an SD card with time and date.</p>
 	<p>Do you have the data format / what is the protocol?</p>
 	<p>It is an I²C (Inter-Integrated Circuit) sensor.</p>

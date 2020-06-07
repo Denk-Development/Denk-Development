@@ -13,7 +13,7 @@ $l['WhatIsDenkDevParagraph'] = 'Denk Development ist eine deutsche <strong>Hardw
 // examples
 $l['Customer'] = 'Kunde';
 $l['ExamplesHeading'] = 'Einige Beispiel-Projekte';
-$l['ExamplesSubtitle'] = 'Hier finden Sie einige Beispiele aus dem Angebotsspektrum von Denk Development.';
+$l['ExamplesSubtitle'] = '<a href="https://timodenk.com/blog/denkdev-turns-four/" target="_blank">Dieser Blog Post (Englisch)</a> listet eine Auswahl von fünf erfolgreich abgeschlossenen Projekten auf. Hier finden Sie noch zwei beispielhafte Dialoge die Sie mit Denk Development haben könnten:';
 $l['ExamplesDialogSensorDataLogging'] = '<p>Ich muss die Werte eines Sensors auf einer SD Karte loggen, mit Uhrzeit und Datum.</p>
 	<p>Mit welcher Schnittstelle arbeitet der Sensor?</p>
 	<p>Es handelt sich um einen I²C (Inter-Integrated Circuit) Sensor.</p>
