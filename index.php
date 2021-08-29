@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 
 	<meta name="author" content="Timo Denk" />
-	<meta name="description" content="Denk Development is a German hardware and software development company." />
+	<meta name="description" content="Denk Development is a Zurich-based hardware and software development company that operates pro bono." />
 	<meta name="keywords" content="Timo, Denk, Development, Hardware, Software" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -24,7 +24,7 @@
     <meta property="og:site_name" content="development.timodenk.com" />
     <meta property="og:url" content="http://development.timodenk.com" />
     <meta property="og:type" content="organization" />
-    <meta property="og:description" content="Denk Development is a German hardware and software development company." />
+    <meta property="og:description" content="Denk Development is a Zurich-based hardware and software development company that operates pro bono." />
     <meta property="og:image" content="img/icon@2x.png" />
     <meta property="og:image:width" content="292" />
     <meta property="og:image:height" content="292" />
@@ -33,7 +33,7 @@
     <meta itemscope itemtype="http://schema.org/Organization" />
 	<meta itemprop="name" content="Denk Development">
 	<meta itemprop="headline" content="Denk Development">
-	<meta itemprop="description" content="Denk Development is a German hardware and software development company.">
+	<meta itemprop="description" content="Denk Development is a Zurich-based hardware and software development company that operates pro bono.">
 	<meta itemprop="image" content="http://development.timodenk.com/img/icon@2x.png">
 
 
@@ -131,44 +131,6 @@
 				<img src="img/icon.svg" class="top-icon" alt="Denk Development Icon">
 				<h1><? l('ContactHeading'); ?></h1>
 				<p><? l('ContactSubtitle'); ?></p>
-				<h3><a href="mailto:development@timodenk.com" target="_blank">development@timodenk.com</a></h3>
-				<hr>
-				<form id="contact-form">
-					<div class="row">
-						<div class="col-sm-5 col-sm-offset-1">
-							<div class="form-group">
-								<div class="input-group">
-									<div class="input-group-addon"><? l('Name'); ?></div>
-									<input type="text" class="form-control" id="contact-name" placeholder="<? l('NamePlaceholder'); ?>" required="required">
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-5">
-							<div class="form-group">
-								<div class="input-group">
-									<div class="input-group-addon"><? l('EmailAddress'); ?></div>
-									<input type="email" class="form-control" id="contact-email" placeholder="<? l('EmailAddressPlaceholder'); ?>" required="required">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-10 col-sm-offset-1">
-							<div class="form-group">
-								<textarea class="form-control" id="contact-message" placeholder="<? l('MessagePlaceholder'); ?>" rows="8" required="required"></textarea>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-4 col-sm-offset-4">
-							<p id="contact-success-msg" class="success hidden"><? l('ContactSuccess'); ?></p>
-							<p id="contact-error-msg" class="danger hidden"><? l('ContactError'); ?></p>
-							<div class="form-group">
-								<input type="submit" id="contact-submit" class="btn btn-primary full-width" value="<? l('ContactSubmit'); ?>" disabled="disabled">
-							</div>
-						</div>
-					</div>
-				</form>
 			</div>
 		</section>
 
@@ -179,20 +141,20 @@
 				<img src="img/icon.svg" class="top-icon" alt="Denk Development Icon">
 				<h1><? l('FAQHeading'); ?></h1>
 				<p>
-					<span class="question"><? l('FAQPriceQuestion'); ?></span>
-					<span class="answer"><? l('FAQPriceAnswer'); ?></span>
+					<span class="question"><? l('FAQQ1'); ?></span>
+					<span class="answer"><? l('FAQA1'); ?></span>
 				</p>
 				<p>
-					<span class="question"><? l('FAQDurationQuestion'); ?></span>
-					<span class="answer"><? l('FAQDurationAnswer'); ?></span>
+					<span class="question"><? l('FAQQ2'); ?></span>
+					<span class="answer"><? l('FAQA2'); ?></span>
 				</p>
 				<p>
-					<span class="question"><? l('FAQSoftwareExchangeQuestion'); ?></span>
-					<span class="answer"><? l('FAQSoftwareExchangeAnswer'); ?></span>
+					<span class="question"><? l('FAQQ3'); ?></span>
+					<span class="answer"><? l('FAQA3'); ?></span>
 				</p>
 				<p>
-					<span class="question"><? l('FAQHardwareExchangeQuestion'); ?></span>
-					<span class="answer"><? l('FAQHardwareExchangeAnswer'); ?></span>
+					<span class="question"><? l('FAQQ4'); ?></span>
+					<span class="answer"><? l('FAQA4'); ?></span>
 				</p>
 				<hr>
 				<p><? l('QuestionNotListed'); ?></p>
