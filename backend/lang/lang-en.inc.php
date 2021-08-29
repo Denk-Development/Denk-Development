@@ -13,7 +13,7 @@ $l['WhatIsDenkDevParagraph'] = 'Denk Development is a Zurich-based <strong>hardw
 // examples
 $l['Customer'] = 'Customer';
 $l['ExamplesHeading'] = 'Some Example Projects';
-$l['ExamplesSubtitle'] = '<a href="https://timodenk.com/blog/denkdev-turns-four/" target="_blank">This blog post</a> contains a selection of five projects that were completed successfully in the past. Below are some simplified dialoges which you might have with Denk Development:';
+$l['ExamplesSubtitle'] = '<p>You are invited to take a look at <b><a href="https://timodenk.com/blog/denkdev-turns-four/" target="_blank">this blog post</a> listing a selection of five past DenkDev projects</b> that were completed successfully.</p><p>Generally speaking, collaborations should typically have the following properties: (1) Be limited in their <b>scope</b>. (2) Be technically <b>interesting</b>. (3) <b>Not have a conflict of interest</b> with my main job at Google.</p><p>Below are some simplified dialoges which you might have with Denk Development:</p>';
 $l['ExamplesDialogSensorDataLogging'] = '<p><span class="customer">Customer:</span> I need to log some sensor data to an SD card with time and date.</p>
 	<p>Do you have the data format / what is the protocol?</p>
 	<p><span class="customer">Customer:</span> It is an I²C (Inter-Integrated Circuit) sensor.</p>
@@ -36,7 +36,7 @@ $l['FAQQ2'] = 'Which projects do you work on?';
 $l['FAQQ3'] = 'How does software exchange work?';
 $l['FAQQ4'] = 'How does hardware exchange work?';
 $l['FAQA1'] = 'I enjoy being exposed to diverse areas of technology. By working for free I receive many project requests and get to choose what to spend time based on my excitement.';
-$l['FAQA2'] = 'Whether I pick a project depends first and foremost on my current (strongly varying) availability. Beyond that it matters how challenging and interesting the project is to me personally as well as whether I feel like I can help someone effectively.';
+$l['FAQA2'] = 'Whether I pick a project depends first and foremost on my current (strongly varying) availability. Beyond that it matters how challenging and interesting the project is to me personally as well as whether I feel like I can help effectively.';
 $l['FAQA3'] = 'Because many projects involve multiple testing cycles, code is generally exchanged via GitHub.';
 $l['FAQA4'] = 'Simply sending packets.';
 $l['QuestionNotListed'] = 'Your questions is not listed? <a href="#get-in-touch">Ask here!</a>';

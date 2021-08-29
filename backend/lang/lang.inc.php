@@ -31,7 +31,7 @@ switch ($lang) {
 
 $l = array();
 
-// include English language file every time to fill eventually not translated words
+// include English language file every time as a fallback
 include('lang-en.inc.php');
 
 include_once($lang_file);

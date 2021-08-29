@@ -13,7 +13,7 @@ $l['WhatIsDenkDevParagraph'] = 'Denk Development ist eine in Zürich ansässige 
 // examples
 $l['Customer'] = 'Kunde';
 $l['ExamplesHeading'] = 'Einige Beispiel-Projekte';
-$l['ExamplesSubtitle'] = '<a href="https://timodenk.com/blog/denkdev-turns-four/" target="_blank">Dieser Blog Post (Englisch)</a> listet eine Auswahl von fünf erfolgreich abgeschlossenen Projekten auf. Hier finden Sie noch zwei beispielhafte Dialoge die Sie mit Denk Development haben könnten:';
+$l['ExamplesSubtitle'] = 'Sie sind eingeladen, einen Blick auf diesen <b><a href="https://timodenk.com/blog/denkdev-turns-four/" target="_blank">Blog-Post (Englisch)</a> zu werfen, in dem beispielhaft fünf abgeschlossene DenkDev-Projekte</b> vorgestellt werden.</p><p>Generell sollte eine Zusammenarbeit die folgenden Eigenschaften haben: (1) Sie sollte in ihrem <b>Umfang begrenzt</b> sein. (2) Sie sollte <b>technisch interessant</b> sein. (3) Es darf <b>keinen Interessenkonflikt</b> mit meiner Haupttätigkeit bei Google geben.</p><p>Im Folgenden finden Sie einige Beispiel-Dialoge, die Sie mit Denk Development führen könnten:</p>';
 $l['ExamplesDialogSensorDataLogging'] = '<p><span class="customer">Kunde:</span> Ich muss die Werte eines Sensors auf einer SD Karte loggen, mit Uhrzeit und Datum.</p>
 	<p>Mit welcher Schnittstelle arbeitet der Sensor?</p>
 	<p><span class="customer">Kunde:</span> Es handelt sich um einen I²C (Inter-Integrated Circuit) Sensor.</p>
