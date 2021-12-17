@@ -2,7 +2,7 @@
 
 // header
 $l['SeekingForEmailContact'] = 'Seeking for email contact? Click here.';
-$l['HeaderTitle'] = '<strong>Hardware</strong> and <strong>Software</strong> Projects – <strong>Pro Bono</strong>';
+$l['HeaderTitle'] = '<strong>Hardware</strong> and <strong>Software</strong> Projects';
 $l['HowAbout'] = 'How about';
 $l['HowAboutIdeas'] = 'a serverless function; a landing page; an LED status indicator; a data logger; an Arduino servo remote control; a board came control software; an airplane cabin pressure control system; Arduino projects; the Teensy microcontroller; a Windows desktop app; a simple website; blinking LEDs; an Android app; Smart Home projects; a nice website section; moving servos; Arduino data transmission; JavaScript; PHP; HTML; Node.js; jQuery; a commandline tool; Assembly; SD Card data logging; remote plug socket control; Raspberry Pi projects; 2" TFT displays; Bootstrap sites; Angular JS web apps; anything related to Wordpress; a security camera';
 

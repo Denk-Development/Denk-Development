@@ -48,119 +48,16 @@
 			<div>
 				<img class="logo-main" src="img/logo.svg" alt="&lt;/&gt; Denk Development" />
 				<p class="title"><? l('HeaderTitle') ?></p>
-				<p class="how-about top40"><span class="how-about-prefix"><? l('HowAbout') ?></span> <span id="how-about-content"></span></p>
-
-				<p class="email"><a href="#get-in-touch"><? l('SeekingForEmailContact'); ?></a></p>
+				<p class="shutdown-notice">
+					In December 2021 I, <a href="https://timodenk.com">Timo Denk</a>, shut down Denk Development – after five and half years of work on exicting projects.
+					Thanks to everyone who was involved – I enjoyed that time a lot!
+				</p>
+				<p class="shutdown-notice">
+					My private priorities have shifted and I therefore decided to discontinue this secondary activity.
+				</p>
 			</div>
 		</div>
 	</header>
-	<main class="main">
-		<section>
-			<div>
-				<img src="img/icon.svg" class="top-icon" alt="Denk Development Icon">
-				<h1><? l('WhatIsDenkDevHeading'); ?></h1>
-				<p><? l('WhatIsDenkDevParagraph'); ?></p>
-
-				<div class="row top40">
-					<div class="col-xs-6">
-						<div class="ch-item ci-1 pull-right">
-							<div class="ch-info">
-								<h3>Software</h3>
-								<p class="small-text">Web &middot; Python &middot; Java</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-xs-6">
-						<div class="ch-item ci-2 pull-left">
-							<div class="ch-info">
-								<h3>Hardware</h3>
-								<p class="small-text">Arduino &middot; AVR &middot; ESP32</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!--<div class="between-section-img"></div>-->
-
-		<section class="customers">
-			<div>
-				<img src="img/icon.svg" class="top-icon" alt="Denk Development Icon">
-				<h1><? l('ExamplesHeading'); ?></h1>
-				<p><? l('ExamplesSubtitle'); ?></p>
-				<div class="row">
-					<div class="col-sm-6 customer-dialog top20">
-						<? l('ExamplesDialogSensorDataLogging'); ?>
-					</div>
-					<hr class="hidden visible-xs">
-					<div class="col-sm-6 customer-dialog top20">
-						<? l('ExamplesDialogWebsiteWithContactForm'); ?>
-					</div>
-				</div>
-				<hr class="top40">
-				<div class="row customer-images">
-					<div class="col-xs-6 col-sm-3 vcenter">
-						<a href="http://hatchery.io/" target="_blank" class="full">
-							<img src="img/customer/hatchery.min.svg" alt="hatchery">
-						</a>
-					</div>
-					<div class="col-xs-6 col-sm-3 vcenter">
-						<a href="http://www.hombach-forsttechnik.de/" target="_blank">
-							<img src="img/customer/hombach-forsttechnik.jpg" alt="Hombach Forsttechnik">
-						</a>
-					</div>
-					<div class="col-xs-6 col-sm-3 vcenter">
-						<a href="http://kreativekiste.de/" target="_blank">
-							<img src="img/customer/kreativekiste.png" alt="Kreative Kiste">
-						</a>
-					</div>
-					<div class="col-xs-6 col-sm-3 vcenter">
-						<a href="http://www.lsd-lasershowdesign.de/" target="_blank" class="full">
-							<img src="img/customer/lsd.min.svg" alt="Laster Show Design">
-						</a>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!--<div class="between-section-img"></div>-->
-
-		<section id="get-in-touch">
-			<div>
-				<img src="img/icon.svg" class="top-icon" alt="Denk Development Icon">
-				<h1><? l('ContactHeading'); ?></h1>
-				<p><? l('ContactSubtitle'); ?></p>
-			</div>
-		</section>
-
-		<!--<div class="between-section-img"></div>-->
-
-		<section class="faq">
-			<div>
-				<img src="img/icon.svg" class="top-icon" alt="Denk Development Icon">
-				<h1><? l('FAQHeading'); ?></h1>
-				<p>
-					<span class="question"><? l('FAQQ1'); ?></span>
-					<span class="answer"><? l('FAQA1'); ?></span>
-				</p>
-				<p>
-					<span class="question"><? l('FAQQ2'); ?></span>
-					<span class="answer"><? l('FAQA2'); ?></span>
-				</p>
-				<p>
-					<span class="question"><? l('FAQQ3'); ?></span>
-					<span class="answer"><? l('FAQA3'); ?></span>
-				</p>
-				<p>
-					<span class="question"><? l('FAQQ4'); ?></span>
-					<span class="answer"><? l('FAQA4'); ?></span>
-				</p>
-				<hr>
-				<p><? l('QuestionNotListed'); ?></p>
-			</div>
-		</section>
-	</main>
 	<footer>
 	    <div class="copyright">
 	        <a class="timodenk" href="http://timodenk.com" target="_blank">Timo Denk</a>
